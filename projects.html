@@ -6,7 +6,6 @@
         <title>Projects - Jackie Lee</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <style>
@@ -38,7 +37,19 @@
                 border: 1px solid #ddd;
                 border-top: none;
             }
+            .rounded-image {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 3px solid #ddd;
+            }
+            .rounded-image img {
+                width: 100%;
+                height: auto;
+            }
         </style>
+
         <script>
             $(document).ready(function(){
                 $(".category").click(function(){
@@ -53,74 +64,208 @@
             });
         </script>
     </head>
-    <body>
-        <div class="container">
-            <header id="header">
-                <h1><a href="index.html">Jackie Lee</a></h1>
-                <nav class="links">
-                    <ul>
-                        <li><a href="index.html">CV</a></li>
-                        <li><a href="research_interest.html">Research Interest</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="publication.html">Publications</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <h2>Projects</h2>
-            <ul class="category-list">
-                <li><a href="#" class="category" data-category="all">All</a></li>
-                <li><a href="#" class="category" data-category="path-planning">Path Planning</a></li>
-                <li><a href="#" class="category" data-category="hardware">Hardware</a></li>
-                <li><a href="#" class="category" data-category="drone-software">Drone Software</a></li>
-                <li><a href="#" class="category" data-category="catia">CATIA</a></li>
-            </ul>
-            <div class="row">
-                <div class="col-md-6 col-sm-12 post path-planning">
-                    <img src="img/pic01.jpg" alt="Path Planning">
-                    <div class="post-content">
-                        <h3><a href="post1.html">Path Planning for Autonomous Vehicles</a></h3>
-                        <p>Published on July 20, 2024</p>
-                        <p>This project focuses on developing advanced algorithms for path planning in autonomous vehicles...</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 post hardware">
-                    <img src="img/pic02.jpg" alt="Hardware Design">
-                    <div class="post-content">
-                        <h3><a href="post2.html">Hardware Design for UAVs</a></h3>
-                        <p>Published on August 15, 2024</p>
-                        <p>This project involves designing and prototyping hardware components for UAVs...</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 post drone-software">
-                    <img src="img/pic03.jpg" alt="Drone Software">
-                    <div class="post-content">
-                        <h3><a href="post3.html">Drone Software Development</a></h3>
-                        <p>Published on September 10, 2024</p>
-                        <p>This project covers the software development process for drone control and navigation...</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 post catia">
-                    <img src="img/pic04.jpg" alt="CATIA Design">
-                    <div class="post-content">
-                        <h3><a href="post4.html">CATIA for Mechanical Design</a></h3>
-                        <p>Published on October 5, 2024</p>
-                        <p>This project demonstrates the use of CATIA software for mechanical design and simulation...</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 post path-planning">
-                    <img src="img/pic05.jpg" alt="Optimizing Path Planning">
-                    <div class="post-content">
-                        <h3><a href="post5.html">Optimizing Path Planning Algorithms</a></h3>
-                        <p>Published on November 12, 2024</p>
-                        <p>In this project, we optimize existing path planning algorithms to improve efficiency and accuracy...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+            <div id="wrapper">
+
+                <!-- Header -->
+                    <header id="header">
+                        <h1><a href="index.html">Jackie Lee</a></h1>
+                        <nav class="links">
+                            <ul>
+                                <li><a href="index.html">CV</a></li>
+                                <li><a href="research_interest.html">Research Interest</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="publication.html">Publications</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                            </ul>
+                        </nav>
+
+                        <nav class="main">
+                            <ul>
+                                <li class="search">
+                                    <a class="fa-search" href="#search">Search</a>
+                                    <form id="search" method="get" action="#">
+                                        <input type="text" name="query" placeholder="Search" />
+                                    </form>
+                                </li>
+                                <li class="menu">
+                                    <a class="fa-bars" href="#menu">Menu</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </header>
+
+                <!-- Menu -->
+                    <section id="menu">
+
+                        <!-- Search -->
+                            <section>
+                                <form class="search" method="get" action="#">
+                                    <input type="text" name="query" placeholder="Search" />
+                                </form>
+                            </section>
+
+                        <!-- Links -->
+                            <section>
+                                <ul class="links">
+                                    <li>
+                                        <a href="research_interest.html">
+                                            <h3>Research Interest</h3>
+                                            <p>Feugiat tempus veroeros dolor</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="projects.html">
+                                            <h3>Projects</h3>
+                                            <p>All the work projects, hw/sw/design </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="publication.html">
+                                            <h3>Publications</h3>
+                                            <p>Phasellus sed ultricies mi congue</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html">
+                                            <h3>Blog</h3>
+                                            <p>Ideas of research/ industry.</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                        <!-- Actions -->
+                            <section>
+                                <ul class="actions stacked">
+                                    <li><a href="#" class="button large fit">CV download</a></li>
+                                </ul>
+                            </section>
+
+                    </section>
+
+                <!-- Main Content -->
+
+                    <div id="main">
+
+                        <h2>Projects</h2>
+                        <ul class="category-list">
+                            <li><a href="#" class="category" data-category="all">All</a></li>
+                            <li><a href="#" class="category" data-category="path-planning">Path Planning</a></li>
+                            <li><a href="#" class="category" data-category="hardware">Hardware</a></li>
+                            <li><a href="#" class="category" data-category="drone-software">Drone Software</a></li>
+                            <li><a href="#" class="category" data-category="catia">CATIA</a></li>
+                        </ul>
+
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 post path-planning">
+                                <img src="img/pic01.jpg" alt="Path Planning">
+                                <div class="post-content">
+                                    <h3><a href="post1.html">Path Planning for Autonomous Vehicles</a></h3>
+                                    <p>Published on July 20, 2024</p>
+                                    <p>This project focuses on developing advanced algorithms for path planning in autonomous vehicles...</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-12 post hardware">
+                                <img src="img/pic02.jpg" alt="Hardware Design">
+                                <div class="post-content">
+                                    <h3><a href="post2.html">Hardware Design for UAVs</a></h3>
+                                    <p>Published on August 15, 2024</p>
+                                    <p>This project involves designing and prototyping hardware components for UAVs...</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-12 post drone-software">
+                                <img src="img/pic03.jpg" alt="Drone Software">
+                                <div class="post-content">
+                                    <h3><a href="post3.html">Drone Software Development</a></h3>
+                                    <p>Published on September 10, 2024</p>
+                                    <p>This project covers the software development process for drone control and navigation...</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-12 post catia">
+                                <img src="img/pic04.jpg" alt="CATIA Design">
+                                <div class="post-content">
+                                    <h3><a href="post4.html">CATIA for Mechanical Design</a></h3>
+                                    <p>Published on October 5, 2024</p>
+                                    <p>This project demonstrates the use of CATIA software for mechanical design and simulation...</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-12 post path-planning">
+                                <img src="img/pic05.jpg" alt="Optimizing Path Planning">
+                                <div class="post-content">
+                                    <h3><a href="post5.html">Optimizing Path Planning Algorithms</a></h3>
+                                    <p>Published on November 12, 2024</p>
+                                    <p>In this project, we optimize existing path planning algorithms to improve efficiency and accuracy...</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                <!-- Sidebar -->    
+                    <div class="col-md-3">
+                        <!-- Contact Info -->
+                            <div class="sidebar-section">
+                                <div class="rounded-image">
+                                    <img src="img/jackieAvatar.jpg" alt="Jackie Lee" />
+                                </div>
+                                <!-- <a href="#" class="logo">
+                                    <img src="img/jackieAvatar.jpg" alt="" style="width: 100px; height: 100px;" />
+                                </a> -->
+                                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Jackie Lee</b></div>(She/her)<br>
+                                <p>Ph.D. Student at <a href="https://autonomy.engr.tamu.edu/">Autonomous Systems Lab</a> in Texas A&M University</p>
+                            </div>
+
+                        <!-- About -->
+                            <div class="sidebar-section blurb" style="margin-top:2%">
+                                <h2>Research Interest</h2>
+                                <p>Path planning, Autonomous Control, Dynamic Control, UAV</p>
+
+                                <ul class="actions">
+                                    <li><a href="research_interest.html" class="button">Learn More</a></li> <li><a href="#" class="button">CV</a></li>
+                                </ul>
+
+                                <p>Doherty 301 M<br>
+                                    Mechanical Engineering<br>
+                                    Texas A&M University <br>
+                                    College Station, Texas <br>
+                                    <a href="mailto:jkleecontrols@tamu.edu" class="icon solid fa-envelope"><span class="label">Email</span></a> <b> jkleecontrols@tamu.edu </b> <br>
+                                    <a href="#" class="icon solid fa-phone"><span class="label">PhoneNumber</span></a> +1)979-326-7851 <br>
+                                    <a href="https://scholar.google.com/citations?user=jQmefb4AAAAJ&hl=en" class="icon solid fa-link"><span class="label">googlescholar</span> Google Scholar</a><br>
+                                    <a href="https://www.linkedin.com/in/jackie-lee-55b558213/ko" class="icon solid fa-link"><span class="label">linkedin</span> LinkedIn</a><br>
+                                </p>
+                                
+                            </div>
+
+
+                        <!-- Footer -->
+                            <div class="sidebar-section" id="footer">
+                                <ul class="icons">
+                                    <li><a href="https://www.facebook.com/ejackie0/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                    <li><a href="https://www.instagram.com/ejackie_0/?fbclid=IwY2xjawERgS1leHRuA2FlbQIxMAABHXIqsZtUlFUUsXha9pfY_4SqRakWfLGM3SyODXtrCpaQEXe7VtAcyQlR0Q_aem_ZfuKvVeGC9EnhVw4tcxAXA" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="https://www.linkedin.com/in/jackie-lee-55b558213/" class="fab fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                                    <li><a href="mailto:jkleecontrols@tamu.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                                </ul>
+                            </div>
+
+
+                    </div>
+                
+
+
+            </div>
+
+      
         <!-- Footer -->
-        <div id="footer">
+        <div class="sidebar-section" id="footer">
             <ul class="icons">
                 <li><a href="https://www.facebook.com/ejackie0/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
                 <li><a href="https://www.instagram.com/ejackie_0/?fbclid=IwY2xjawERgS1leHRuA2FlbQIxMAABHXIqsZtUlFUUsXha9pfY_4SqRakWfLGM3SyODXtrCpaQEXe7VtAcyQlR0Q_aem_ZfuKvVeGC9EnhVw4tcxAXA" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
@@ -128,5 +273,14 @@
                 <li><a href="mailto:jkleecontrols@tamu.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
             </ul>
         </div>
+
+        <!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
     </body>
 </html>
