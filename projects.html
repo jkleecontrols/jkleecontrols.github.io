@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects - Jackie Lee</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <style>
+            .category-list {
+                margin-bottom: 20px;
+                list-style: none;
+                padding: 0;
+            }
+            .category-list li {
+                display: inline;
+                margin-right: 10px;
+            }
+            .category-list li a {
+                text-decoration: none;
+                color: #007BFF;
+            }
+            .category-list li a:hover {
+                text-decoration: underline;
+            }
+            .post {
+                margin-bottom: 40px;
+            }
+            .post img {
+                width: 100%;
+                height: auto;
+            }
+            .post-content {
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-top: none;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $(".category").click(function(){
+                    var category = $(this).attr("data-category");
+                    $(".post").hide();
+                    if(category == "all"){
+                        $(".post").show();
+                    } else {
+                        $("." + category).show();
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <header id="header">
+                <h1><a href="index.html">Jackie Lee</a></h1>
+                <nav class="links">
+                    <ul>
+                        <li><a href="index.html">CV</a></li>
+                        <li><a href="research_interest.html">Research Interest</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="publication.html">Publications</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <h2>Projects</h2>
+            <ul class="category-list">
+                <li><a href="#" class="category" data-category="all">All</a></li>
+                <li><a href="#" class="category" data-category="path-planning">Path Planning</a></li>
+                <li><a href="#" class="category" data-category="hardware">Hardware</a></li>
+                <li><a href="#" class="category" data-category="drone-software">Drone Software</a></li>
+                <li><a href="#" class="category" data-category="catia">CATIA</a></li>
+            </ul>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 post path-planning">
+                    <img src="img/pic01.jpg" alt="Path Planning">
+                    <div class="post-content">
+                        <h3><a href="post1.html">Path Planning for Autonomous Vehicles</a></h3>
+                        <p>Published on July 20, 2024</p>
+                        <p>This project focuses on developing advanced algorithms for path planning in autonomous vehicles...</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 post hardware">
+                    <img src="img/pic02.jpg" alt="Hardware Design">
+                    <div class="post-content">
+                        <h3><a href="post2.html">Hardware Design for UAVs</a></h3>
+                        <p>Published on August 15, 2024</p>
+                        <p>This project involves designing and prototyping hardware components for UAVs...</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 post drone-software">
+                    <img src="img/pic03.jpg" alt="Drone Software">
+                    <div class="post-content">
+                        <h3><a href="post3.html">Drone Software Development</a></h3>
+                        <p>Published on September 10, 2024</p>
+                        <p>This project covers the software development process for drone control and navigation...</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 post catia">
+                    <img src="img/pic04.jpg" alt="CATIA Design">
+                    <div class="post-content">
+                        <h3><a href="post4.html">CATIA for Mechanical Design</a></h3>
+                        <p>Published on October 5, 2024</p>
+                        <p>This project demonstrates the use of CATIA software for mechanical design and simulation...</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 post path-planning">
+                    <img src="img/pic05.jpg" alt="Optimizing Path Planning">
+                    <div class="post-content">
+                        <h3><a href="post5.html">Optimizing Path Planning Algorithms</a></h3>
+                        <p>Published on November 12, 2024</p>
+                        <p>In this project, we optimize existing path planning algorithms to improve efficiency and accuracy...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/ejackie0/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/ejackie_0/?fbclid=IwY2xjawERgS1leHRuA2FlbQIxMAABHXIqsZtUlFUUsXha9pfY_4SqRakWfLGM3SyODXtrCpaQEXe7VtAcyQlR0Q_aem_ZfuKvVeGC9EnhVw4tcxAXA" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://www.linkedin.com/in/jackie-lee-55b558213/" class="fab fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="mailto:jkleecontrols@tamu.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </div>
+    </body>
+</html>
