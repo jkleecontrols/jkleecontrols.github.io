@@ -77,8 +77,10 @@
 
             <section>
                 <h3>Preview</h3>
-                <!-- <embed src="http://example.com/the.pdf" width="500" height="375" type="application/pdf">
-                    <img src="CV/Resume_Jaekyung Lee_2pages.pdf.jpg" alt="resume img" /> -->
+                <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <img src="img/researches/Resume0922_p1.png" alt="resume img" style="width: 48%;" />
+                    <img src="img/researches/Resume0922_p2.png" alt="resume img" style="width: 48%;" />
+                </div>
 
                 <p>My research focuses on the complex and dynamic challenges associated with the routing and scheduling of unmanned vehicles. This includes both aerial (UAVs) and ground (UGVs) vehicles, addressing key issues such as optimization, real-time decision making, and system integration.</p>
 
@@ -114,33 +116,6 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- JavaScript to Load PDF with PDF.js -->
-    <script>
-        // URL of the PDF file
-        const url = 'https://yourwebsite.com/CV/042224_UpdatedCV.pdf';
-
-        // Load PDF
-        const loadingTask = pdfjsLib.getDocument(url);
-        loadingTask.promise.then(pdf => {
-            // Fetch the first page
-            pdf.getPage(1).then(page => {
-                const viewport = page.getViewport({ scale: 1.5 });
-                const canvas = document.getElementById('pdf-canvas');
-                const context = canvas.getContext('2d');
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-
-                // Render PDF page into canvas context
-                const renderContext = {
-                    canvasContext: context,
-                    viewport: viewport
-                };
-                page.render(renderContext);
-            });
-        }).catch(error => {
-            console.error('Error loading PDF:', error);
-        });
-    </script>
 
 </body>
 </html>
