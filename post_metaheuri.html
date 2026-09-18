@@ -1,121 +1,13 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Metaheuristic UAV-UGV Path Planning - Jackie Lee</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+  <link rel="canonical" href="https://jkleecontrols.github.io/research.html#aiaa">
+  <meta http-equiv="refresh" content="0; url=research.html#aiaa">
+  <meta name="robots" content="noindex">
 </head>
-<body class="single is-preload">
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Header -->
-        <header id="header">
-            <h1><a href="index.html">Jackie Lee</a></h1>
-            <nav class="links">
-                <ul>
-                    <li><a href="cv.html">CV</a></li>
-                    <li><a href="research_interest.html">Research Interests</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="publication.html">Publications</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </nav>
-            <nav class="main">
-                <ul>
-                    <li class="search">
-                        <a class="fa-search" href="#search">Search</a>
-                        <form id="search" method="get" action="#">
-                            <input type="text" name="query" placeholder="Search" />
-                        </form>
-                    </li>
-                    <li class="menu">
-                        <a class="fa-bars" href="#menu">Menu</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Main -->
-        <div id="main">
-            <!-- Post -->
-            <article class="post">
-                <header>
-                    <div class="title">
-                        <h2><a href="#">Meta-Heuristic Approach for UAV-UGV Path Planning Under Battery Constraints</a></h2>
-                        <p>Path planning, UAV-UGV collaboration, Simulation</p>
-                    </div>
-                    <div class="meta">
-                        <time class="published" datetime="2024-01-03">January, 2024</time>
-                        <a href="#" class="author"><span class="name">Jackie Lee</span><img src="img/Jackie_Selfies/JackieHeadshot.png" alt="" /></a>
-                    </div>
-                </header>
-                
-                <p>This study focuses on solving path planning and scheduling problems for multiple Unmanned Aerial Vehicles (UAVs) under strict battery constraints. These UAVs collaborate with Unmanned Ground Vehicles (UGVs) capable of recharging them in the field. The problem is framed as a Team Orienteering Problem (TOP), which is NP-hard.</p>
-
-                <h3>Research Objectives</h3>
-                <p>The key objectives of the study are to maximize reward collection by coordinating UAVs and UGVs to visit specific nodes in a 20x20 km² area. The UAVs are tasked with visiting these nodes while ensuring that they remain within their battery limits, which adds complexity to the path planning.</p>
-
-                <video width="640" height="480" src="img/researches/metaheuri/newtryone.mp4" muted autoplay playsinline></video>
-                
-                <div>
-                    <img src="img/researches/metaheuri/areacoverage.png" alt="Terrain Data" style="width:30%;" />
-                    <img src="img/researches/metaheuri/Screenshot 2024-09-18 at 3.15.24 PM.png" alt="Simulation Data" style="width:50%;" />
-                </div>
-                <p>From left to right: Given Terrain Data / Simulation Data / Battery Status of Each Vehicle</p>
-
-                <h3>Key Challenges and Problem Formulation</h3>
-                <p>Our approach aims to solve the **Team Orienteering Problem (TOP)** with the added complexity of UAV battery constraints. The UGV plays a crucial role in this problem, acting as a mobile recharging station that enables UAVs to extend their mission times. The mission spans a 72-hour schedule, where we evaluate the efficiency of the UAV-UGV team in maximizing rewards by visiting various nodes in the map.</p>
-
-                <h3>Meta-Heuristic Approach</h3>
-                <p>We propose a multi-step **meta-heuristic algorithm** to address the problem, which includes:</p>
-                <ul>
-                    <li>**Greedy Insertion Heuristic** - to initialize the path for UAVs and UGVs.</li>
-                    <li>**Improvement Steps** - such as 2-point exchanges, one-point movement, and route optimization.</li>
-                    <li>**Tabu Search Heuristic** - to avoid local optima and find better global solutions.</li>
-                    <li>**Rearrangement and Reattachment** - to refine routes, ensuring UAV efficiency and maximizing team scores.</li>
-                </ul>
-
-                <div>
-                    <img src="img/researches/metaheuri/Capacity with cc cv.png" alt="Battery Capacity" style="width:40%;" />
-                    <img src="img/researches/metaheuri/Charge DIscharge.png" alt="Battery Charge-Discharge" style="width:40%;" />
-                </div>
-                <p>Battery Charging and Discharging Cycles</p>
-
-                <h3>Simulation Results</h3>
-                <p>The algorithm was tested in a 72-hour mission simulation. Results showed that the proposed approach significantly optimized the UAV-UGV path planning and scheduling, with clear improvements in node visits, battery management, and overall mission success. The UAV-UGV team was able to visit up to 38,962 targets within the simulation timeframe, demonstrating the algorithm's efficiency.</p>
-
-                <p>Lee, J. J., & Rathinam, S. (2024). A Meta-Heuristic Approach for an Aerial-Ground Vehicle Path Planning Problem. In AIAA SCITECH 2024 Forum (p. 0230).</p>
-                
-                <footer>
-                    <ul class="stats">
-                        <li><a href="img/researches/metaheuri/FinalPaper_A_Meta_Heuristic_Approach_for_an_Aerial_Ground_Vehicle_Path_Planning_Problem.pdf">Read the full paper</a></li>
-                        <li><a href="#" class="icon solid fa-heart">28</a></li>
-                        <li><a href="#" class="icon solid fa-comment">128</a></li>
-                    </ul>
-                </footer>
-            </article>
-        </div>
-
-        <!-- Footer -->
-        <section id="footer">
-            <ul class="icons">
-                <li><a href="https://www.facebook.com/ejackie0/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                <li><a href="https://www.instagram.com/ejackie_0/?fbclid=IwY2xjawERgS1leHRuA2FlbQIxMAABHXIqsZtUlFUUsXha9pfY_4SqRakWfLGM3SyODXtrCpaQEXe7VtAcyQlR0Q_aem_ZfuKvVeGC9EnhVw4tcxAXA" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a href="https://www.linkedin.com/in/jackie-lee-55b558213/" class="fab fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                <li><a href="mailto:jkleecontrols@tamu.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-            </ul>
-            <p class="copyright">&copy; Jackie Lee. Design: <a href="http://html5up.net">HTML5 UP</a>.</p>
-        </section>
-    </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+<body>
+  <p>This page has moved to <a href="research.html#aiaa">research.html#aiaa</a>.</p>
 </body>
 </html>

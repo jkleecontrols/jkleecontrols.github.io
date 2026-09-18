@@ -1,189 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Interest - Jackie Lee</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-
-    <!-- Include PDF.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-
-    <style>
-        .rounded-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid #ddd;
-        }
-        .rounded-image img {
-            width: 100%;
-            height: auto;
-        }
-        #pdf-canvas {
-            border: 1px solid #ddd;
-            width: 100%;
-            margin: auto;
-            display: block;
-        }
-    </style>
-
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDM6Z2R0L0"></script>
-    <script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV | Jackie Lee</title>
+  <meta name="description" content="Curriculum vitae of Jaekyung (Jackie) Lee: education, industry and research experience, teaching, awards.">
+  <meta name="author" content="Jaekyung (Jackie) Lee">
+  <meta property="og:title" content="CV | Jackie Lee">
+  <meta property="og:description" content="Curriculum vitae of Jaekyung (Jackie) Lee: education, industry and research experience, teaching, awards.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jkleecontrols.github.io/cv.html">
+  <meta property="og:image" content="https://jkleecontrols.github.io/img/profile/headshot.jpg">
+  <link rel="canonical" href="https://jkleecontrols.github.io/cv.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237a1f2b'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EJL%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDM6Z2R0L0"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-XDM6Z2R0L0');
-    </script>
+  </script>
 </head>
-<body class="is-preload">
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Jackie Lee</a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="index.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="cv.html" aria-current="page">CV</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+  </header>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Header -->
-        <header id="header">
-            <h1><a href="index.html">Jackie Lee</a></h1>
-            <nav class="links">
-                <ul>
-                    <li><a href="cv.html">CV</a></li>
-                    <li><a href="research_interest.html">Research Interest</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="publication.html">Publications</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </nav>
-            <nav class="main">
-                <ul>
-                    <li class="search">
-                        <a class="fa-search" href="#search">Search</a>
-                        <form id="search" method="get" action="#">
-                            <input type="text" name="query" placeholder="Search" />
-                        </form>
-                    </li>
-                    <li class="menu">
-                        <a class="fa-bars" href="#menu">Menu</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Main -->
-        <div id="main" class="container">
-            <header class="major">
-                <h2>Explore My Career</h2>
-                <ul class="actions">
-                    <li><a href="CV/Resume_Jaekyung Lee_2pages.pdf" class="button">Download Resume</a></li>
-                    <li><a href="CV/042224_UpdatedCV.pdf" class="button">Download CV</a></li>
-                </ul>
-            </header>
-        
-            <section>
-                <h3>Education</h3>
-                <ul>
-                    <li><strong>Ph.D. in Mechanical Engineering</strong> – Texas A&M University (Aug. 2022 – Present)</li>
-                    <li><strong>B.S. in Unmanned Aerial and Autonomous Vehicle Engineering</strong> – Kyungwoon University (Mar. 2018 – Feb. 2022, GPA: 3.9/4.0)</li>
-                </ul>
-            </section>
-        
-            <section>
-                <h3>Skills</h3>
-                <ul class="skills-list">
-                    <li>C/C++ & Python</li>
-                    <li>MATLAB & Simulink</li>
-                    <li>Optimization Tools: Gurobi</li>
-                    <li>Autonomous Vehicle Control</li>
-                    <li>3D Modeling: CATIA V5</li>
-                    <li>ROS & Ardupilot</li>
-                    <li>Battery Management Optimization</li>
-                </ul>
-            </section>
-        
-            <section>
-                <h3>Professional Experience</h3>
-                <div class="experience">
-                    <h4>Research Assistant – Texas A&M University</h4>
-                    <p><em>Aug. 2022 – Present</em></p>
-                    <ul>
-                        <li>Developed control algorithms for autonomous systems, leading to a 50% improvement in vehicle efficiency.</li>
-                        <li>Tested real-time autonomous vehicle control algorithms in C++ to enhance system stability.</li>
-                    </ul>
-        
-                    <h4>Research Assistant – DEVCOM Army Research Lab</h4>
-                    <p><em>Aug. 2022 – Jul. 2024</em></p>
-                    <ul>
-                        <li>Simulated path planning algorithms using Python for multi-agent systems.</li>
-                        <li>Designed a battery scheduling algorithm to optimize vehicle operations across various terrains.</li>
-                    </ul>
-        
-                    <h4>Project Leader – Kyungwoon University</h4>
-                    <p><em>Sept. 2020 – Nov. 2021</em></p>
-                    <ul>
-                        <li>Led the design of a downsized Uber-Hyundai eVTOL, winning $13,000 at the 2021 International PAV Technology Contest.</li>
-                        <li>Developed dynamic characteristics for a tri-eVTOL using CATIA V5 and PX4 autopilot.</li>
-                    </ul>
-        
-                    <h4>Research Intern – AM System Inc.</h4>
-                    <p><em>Jan. 2021 – Feb. 2021</em></p>
-                    <ul>
-                        <li>Built and tested a carbon composite drone and optimized control systems using MAVproxy.</li>
-                    </ul>
-                </div>
-            </section>
-        
-            <section>
-                <h3>Research Focus</h3>
-                <p>My research revolves around tackling the intricate challenges of routing and scheduling unmanned vehicles, both aerial (UAVs) and ground-based (UGVs). I focus on optimization strategies, real-time decision-making, and system integration.</p>
-            </section>
-        
-            <section>
-                <h3>Publications & Awards</h3>
-                <ul>
-                    <li><strong>Second Place</strong> – UKC 2024 Poster Presentation, "Meta-Heuristic Algorithm for Aerial-Ground Vehicles" (Aug. 2024)</li>
-                    <li><strong>Second Place</strong> – 2021 International PAV Technology Contest, "Hyundai PAV eVTOL Design" (Nov. 2021)</li>
-                    <li><strong>Publication</strong> – "Persistent Robot Charging Problem," IEEE R-AL, 2024</li>
-                </ul>
-            </section>
+  <main>
+    <div class="container">
+      <header class="page-head">
+        <p class="eyebrow">Curriculum vitae</p>
+        <h1>CV</h1>
+        <p class="lead">Ph.D. candidate in autonomous systems, working on multi-agent path planning, optimization and the dynamics and control of aerial and ground vehicles. I take algorithms from research to hardware with ROS&nbsp;2, high-fidelity simulation and sim-to-real testing.</p>
+        <div class="links-row">
+          <a class="btn primary" href="CV/CV_JackieLee.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Download CV (PDF)</a>
+          <a class="btn" href="CV/Resume_JackieLee.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Download resume (PDF)</a>
         </div>
+      </header>
 
-        
+      <section class="block">
+        <div class="section-title"><h2>Education</h2></div>
+        <ul class="timeline">
+          <li><div class="when">2022 – 2027 (exp.)</div><div>
+            <div class="org">Texas A&amp;M University</div>
+            <div class="role">Ph.D., Mechanical Engineering · Autonomous Systems Lab · Advisor: Dr. Sivakumar Rathinam</div>
+            <ul><li>Research focus: scalable optimization algorithms for multi-agent systems, distributed decision-making and simulation-based performance analysis.</li></ul>
+          </div></li>
+          <li><div class="when">2018 – 2022</div><div>
+            <div class="org">Kyungwoon University, South Korea</div>
+            <div class="role">B.S., Unmanned Aerial and Autonomous Vehicle Engineering · GPA 3.9/4.0 · Summa Cum Laude</div>
+            <ul><li>Full-tuition scholarship (four years); Merit-based Scholarship with Highest Honors (three semesters); National Science and Engineering Scholarship, Ministry of Education.</li></ul>
+          </div></li>
+        </ul>
+      </section>
 
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="sidebar-section">
-                <div class="rounded-image">
-                    <img src="img/Jackie_Selfies/JackieHeadshot.png" alt="Jackie Lee" />
-                </div>
-
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Jaekyung Jackie Lee</b></div>(She/her)<br>
-                <p>Ph.D. Student at <a href="https://autonomy.engr.tamu.edu/">Autonomous Systems Lab</a> in Texas A&M University</p>
-            </div>
-
-            <ul class="icons">
-                <li><a href="https://www.facebook.com/ejackie0/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                <li><a href="https://www.instagram.com/ejackie_0/?fbclid=IwY2xjawERgS1leHRuA2FlbQIxMAABHXIqsZtUlFUUsXha9pfY_4SqRakWfLGM3SyODXtrCpaQEXe7VtAcyQlR0Q_aem_ZfuKvVeGC9EnhVw4tcxAXA" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a href="https://www.linkedin.com/in/jackie-lee-55b558213/" class="fab fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                <li><a href="mailto:jkleecontrols@tamu.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+      <section class="block">
+        <div class="section-title"><h2>Research &amp; industry experience</h2></div>
+        <ul class="timeline">
+          <li><div class="when">May – Aug 2026</div><div>
+            <div class="org">Magna Electronics · ADAS</div>
+            <div class="role">ADAS Engineering Intern · Lowell, MA · Advisor: Ashesh Goswami</div>
+            <ul>
+              <li>Calibrated the perception front end of an automated valet parking system: fisheye camera intrinsics and camera–IMU extrinsics that anchor downstream localization, free-space estimation and closed-loop parking control.</li>
+              <li>Brought up GMSL2/FAKRA automotive cameras on NVIDIA Jetson AGX Orin, modifying and rebuilding the vendor camera driver for the team's JetPack/L4T configuration, and wrote the bring-up documentation the team now works from.</li>
+              <li>Containerized the perception development environment with Docker and ROS&nbsp;2 for a reproducible hardware-in-the-loop build shared across developers.</li>
+              <li>Worked through pull requests and peer code review in a multi-developer production codebase; validated on bench and in-vehicle setups.</li>
             </ul>
-            <p class="copyright">&copy; Jackie Lee. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
-        </footer>
+          </div></li>
+          <li><div class="when">May – Dec 2025</div><div>
+            <div class="org">Amazon Robotics · Warehouse Mobile Robot R&amp;D</div>
+            <div class="role">Applied Scientist II Intern · North Reading, MA · Advisor: Dr. Yuri Ivanov</div>
+            <ul>
+              <li>Built a physics-consistent ROS&nbsp;2 + Isaac Sim + Unreal Engine automated test framework for large-scale evaluation of motion control, PID performance, navigation and perception under sensor noise, disturbances and contact-rich warehouse scenes.</li>
+              <li>Designed and validated position and torque control pipelines with EKF-based state estimation, integrating LiDAR-based 3D detection with real-time trajectory execution; performed system identification and sim-to-real transfer to embedded hardware (Raspberry Pi, CAN bus, TI board, ESP32).</li>
+              <li>Turned research prototypes into reusable ROS&nbsp;2 modules and end-to-end simulation-to-hardware validation pipelines.</li>
+            </ul>
+          </div></li>
+          <li><div class="when">Aug 2022 – present</div><div>
+            <div class="org">Texas A&amp;M University, Autonomous Systems Lab</div>
+            <div class="role">Graduate Research Assistant · College Station, TX · Advisor: Dr. Sivakumar Rathinam</div>
+            <ul>
+              <li>Developed camera-aware UAV coverage and trajectory optimization for heterogeneous UAV–UGV teams with battery constraints (<a href="research.html#icuas">ICUAS 2025</a>).</li>
+              <li>Built ILP recharging schedules for heterogeneous robot fleets (<a href="research.html#ral">IEEE RA-L 2025</a>).</li>
+              <li>Designed coordination and task-allocation algorithms for a Clearpath UGV with a Universal Robots UR5 manipulator.</li>
+              <li>Built physics-aware simulation with depth camera, LiDAR, radio and magnetic-field sensor models for closed-loop autonomy evaluation.</li>
+            </ul>
+          </div></li>
+          <li><div class="when">Aug 2022 – Jul 2024</div><div>
+            <div class="org">DEVCOM Army Research Laboratory · Collaborative project</div>
+            <div class="role">Graduate Researcher · Advisors: Dr. Sivakumar Rathinam, Dr. James Humann</div>
+            <ul>
+              <li>Built a Python simulation and meta-heuristic planner coordinating 4 aerial and ground vehicles over a 72-hour persistent surveillance mission (<a href="research.html#aiaa">AIAA SciTech 2024</a>).</li>
+              <li>Formulated optimization-based motion strategies under physical and battery constraints, and worked with UGV hardware teams on integrated simulation and field tests.</li>
+            </ul>
+          </div></li>
+          <li><div class="when">Sep 2020 – Nov 2021</div><div>
+            <div class="org">Kyungwoon University, Autonomous &amp; Intelligent Robotics Lab</div>
+            <div class="role">Project Leader · PAV tri-eVTOL and launch-type foldable drone</div>
+            <ul>
+              <li>Led the design of a tilt-rotor eVTOL control system on PX4 (C++) with real-time convex optimization of motor efficiency; won $13K at the 2021 International PAV Technology Contest.</li>
+              <li>Built a launch-type foldable drone mechanism and Pixhawk control system, a hand-layered carbon-composite airframe, and a Raspberry Pi / MAVProxy flight controller.</li>
+            </ul>
+          </div></li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <div class="section-title"><h2>Publications</h2><a href="publications.html">Details &amp; BibTeX →</a></div>
+        <ol class="small" style="padding-left:20px">
+          <li><b>J. J. Lee</b>, S. Rathinam. “Team Orienteering and Scheduling Algorithms for Collaborative UAV-UGV Area Coverage with Battery Constraints.” <i>ICUAS</i>, 2025.</li>
+          <li>N. Kumar, <b>J. J. Lee</b>, S. Rathinam, S. Darbha, P. B. Sujit, R. Raman. “The Persistent Robot Charging Problem for Long-Duration Autonomy.” <i>IEEE Robotics and Automation Letters</i>, 10(3):2191–2198, 2025.</li>
+          <li><b>J. J. Lee</b>, S. Rathinam. “A Meta-Heuristic Approach for an Aerial-Ground Vehicle Path Planning Problem.” <i>AIAA SciTech Forum</i>, 2024.</li>
+        </ol>
+      </section>
+
+      <section class="block">
+        <div class="section-title"><h2>Teaching</h2></div>
+        <ul class="timeline">
+          <li><div class="when">Sep 2026 – present</div><div><div class="org">MEEN 432: Automotive Engineering</div><div class="role">Teaching Assistant · 60+ students · vehicle systems with MATLAB/Simulink</div></div></li>
+          <li><div class="when">Jan 2025 – May 2026</div><div><div class="org">MEEN 365: Dynamic Systems and Control Lab</div><div class="role">Teaching Assistant · AC/DC motor and slider-pendulum labs · mentored 80+ lab students, supported 540 students</div></div></li>
+          <li><div class="when">Aug – Dec 2024</div><div><div class="org">MEEN 225: Engineering Mechanics (Honors)</div><div class="role">Teaching Assistant · recitation sessions for 250+ students</div></div></li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <div class="section-title"><h2>Awards &amp; honors</h2></div>
+        <ul class="news">
+          <li><time>2025</time><span>Korea-US Science Cooperation Center (KUSCO) Graduate Scholarship ($2,000)</span></li>
+          <li><time>2025</time><span>Susan M. Arseven ’75 “Make-a-Difference” Memorial Award, Women in Science and Engineering (WISE) ($1,000)</span></li>
+          <li><time>2024</time><span>Summer Research Grant, J. Mike Walker ’66 Department of Mechanical Engineering, Texas A&amp;M ($7,875)</span></li>
+          <li><time>2024</time><span>Second Place, Poster Award, US-Korea Conference (UKC) 2024</span></li>
+          <li><time>2021</time><span>Hanwha Aerospace CEO Award, 3rd National University Student Capstone Contest (team leader)</span></li>
+          <li><time>2021</time><span>Second Place, International PAV Technology Contest ($13,000), downsized Uber-Hyundai S-A1 eVTOL</span></li>
+          <li><time>2019</time><span>Rocket Launch Competition, National Universities Rocket Association (NURA): parachute ejection system</span></li>
+          <li><time>2019</time><span>Third Place, Korea IT Businesswomen's Association (KIBWA) ICT Mentoring (team leader): hidden-camera detection</span></li>
+          <li><time>2018</time><span>Second Place, KIBWA ICT Mentoring: drone-based solar panel diagnosis</span></li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <div class="section-title"><h2>Leadership &amp; service</h2></div>
+        <ul class="timeline">
+          <li><div class="when">2022 – 2025</div><div><div class="org">Korean-American Scientists and Engineers Association (KSEA)</div><div class="role">National Secretary, UKC 2025 (1,500+ attendees, 200+ speakers) · President, Texas A&amp;M Chapter</div></div></li>
+          <li><div class="when">2024 – 2025</div><div><div class="org">Mechanical Engineering Female Graduate Students (MEFEGs)</div><div class="role">Officer · departmental events and club website</div></div></li>
+          <li><div class="when">2019 – 2020</div><div><div class="org">Grin-Narae drone club, Kyungwoon University</div><div class="role">Founder and President · startup grants from KISED and Korea Expressway Corporation</div></div></li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <div class="section-title"><h2>Skills &amp; certifications</h2></div>
+        <dl class="skills">
+          <dt>Programming</dt><dd>C++, Python, C, MATLAB, Simulink, Julia, PyTorch</dd>
+          <dt>Robotics &amp; tools</dt><dd>ROS&nbsp;2, Isaac Sim, Docker, Gurobi, OpenCV, PCL, Kalibr, Linux, Git, CATIA</dd>
+          <dt>Expertise</dt><dd>Multi-agent path planning, combinatorial optimization, state estimation (EKF), closed-loop control, vehicle dynamics, sim-to-real transfer</dd>
+          <dt>Hardware</dt><dd>LiDAR/camera/IMU integration, camera intrinsic &amp; extrinsic calibration, Jetson/GMSL2 camera bring-up, UAV &amp; UGV prototyping</dd>
+          <dt>Certifications</dt><dd>FAA Part 107 Remote Pilot (2022) · Ultralight Vehicle Pilot, Korea Transportation Safety Authority (2020)</dd>
+        </dl>
+      </section>
 
     </div>
+  </main>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
-
+  <footer class="site-footer">
+    <div class="container">
+      <div>&copy; <span id="year">2026</span> Jaekyung (Jackie) Lee</div>
+      <div class="footer-links">
+        <a href="mailto:jkleecontrols@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=jQmefb4AAAAJ&hl=en">Google Scholar</a>
+        <a href="https://github.com/jkleecontrols">GitHub</a>
+        <a href="https://www.linkedin.com/in/jackie-lee-55b558213/">LinkedIn</a>
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

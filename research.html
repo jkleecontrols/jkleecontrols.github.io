@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | Jackie Lee</title>
+  <meta name="description" content="Research on planning and scheduling for battery-limited multi-robot systems: UAV-UGV coverage, persistent robot charging, and meta-heuristic routing.">
+  <meta name="author" content="Jaekyung (Jackie) Lee">
+  <meta property="og:title" content="Research | Jackie Lee">
+  <meta property="og:description" content="Research on planning and scheduling for battery-limited multi-robot systems: UAV-UGV coverage, persistent robot charging, and meta-heuristic routing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jkleecontrols.github.io/research.html">
+  <meta property="og:image" content="https://jkleecontrols.github.io/img/profile/headshot.jpg">
+  <link rel="canonical" href="https://jkleecontrols.github.io/research.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237a1f2b'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EJL%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDM6Z2R0L0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XDM6Z2R0L0');
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Jackie Lee</a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="index.html">About</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="cv.html">CV</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <header class="page-head">
+        <p class="eyebrow">Research</p>
+        <h1>Planning for robots that run out of battery</h1>
+        <p class="lead">Long missions with small robots are limited less by the robots than by their batteries. My work treats charging as part of the plan: routes, charging slots and rendezvous points are optimized together, then checked in simulation against flight time, turn rate and charging constraints.</p>
+        <p class="lead">In 2026 I re-implemented each project with tests and fixed-seed experiments. The figures and numbers below come from that code.</p>
+        <div class="toc">
+          <a class="btn sm" href="#icuas">UAV–UGV area coverage · ICUAS 2025</a>
+          <a class="btn sm" href="#ral">Persistent robot charging · RA-L 2025</a>
+          <a class="btn sm" href="#aiaa">Aerial–ground routing · AIAA 2024</a>
+          <a class="btn sm" href="#ongoing">Ongoing work</a>
+        </div>
+      </header>
+
+      <!-- ============================================================ ICUAS -->
+      <article class="project" id="icuas">
+        <p class="eyebrow">ICUAS 2025</p>
+        <h2>Collaborative UAV–UGV area coverage under battery constraints</h2>
+        <p class="cite"><b>J. J. Lee</b>, S. Rathinam. “Team Orienteering and Scheduling Algorithms for Collaborative UAV-UGV Area Coverage with Battery Constraints,” ICUAS 2025.</p>
+        <div class="links-row" style="margin:0 0 8px">
+          <a class="btn sm" href="https://ieeexplore.ieee.org/document/11007933/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Paper</a>
+          <a class="btn sm" href="https://github.com/jkleecontrols/uav-ugv-area-coverage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>Code</a>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h3>Problem</h3>
+            <p>Three camera UAVs keep the Texas A&amp;M campus under surveillance for a 102-minute mission. One UGV drives a fixed route taken from GeoJSON road data and carries two wireless charging pads. Instead of visiting points, the UAVs are rewarded for the ground area their camera footprint actually observes.</p>
+          </div>
+          <div>
+            <h3>Approach</h3>
+            <ul>
+              <li>The surveillance area is split into cells sized by the UAV camera footprint.</li>
+              <li>Heading-aware path construction: each next pose lies inside a turn-limited cone, so every plan is flyable.</li>
+              <li>Reward re-initialization lets the team orienteering search escape local stagnation.</li>
+              <li>An ILP fixes the charging slots on the two pads and keeps them synchronized with the UGV position.</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure>
+          <video controls muted playsinline preload="none" poster="img/research/icuas/comparison_poster.jpg">
+            <source src="img/research/icuas/comparison.mp4" type="video/mp4">
+          </video>
+          <figcaption>Same camera and charging schedule, three planners (naive area, feasible greedy, FOV + reinitialization). 102 simulated minutes in 60 seconds; blue shading is observed area.</figcaption>
+        </figure>
+
+        <h3>Measured results</h3>
+        <p>101 fixed-protocol runs: 10 paired seeds for each of 8 methods, plus turn-rate and planning-grid sensitivity. Every method flies under the same turn limit and charging schedule. An independent checker re-verifies trajectories, energy and coverage for every run.</p>
+        <div class="stats">
+          <div class="stat"><div class="num">99.6%</div><div class="label">mean area coverage, full method</div></div>
+          <div class="stat"><div class="num">+11.4 pp</div><div class="label">coverage over a point-based planner</div></div>
+          <div class="stat"><div class="num">+23.2 pp</div><div class="label">coverage over a parallel-strip survey</div></div>
+          <div class="stat"><div class="num">22.7 min</div><div class="label">mean observation age (naive area: 24.8 min)</div></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Method (10 seeds)</th><th class="num">Coverage %</th><th class="num">Mean age, min</th><th class="num">Planning, s</th></tr></thead>
+            <tbody>
+              <tr><td>Parallel-strip survey</td><td class="num">76.42</td><td class="num">30.01</td><td class="num">0.65</td></tr>
+              <tr><td>Point planner</td><td class="num">88.21</td><td class="num">32.95</td><td class="num">0.66</td></tr>
+              <tr><td>Naive area</td><td class="num">99.33 ± 0.40</td><td class="num">24.75 ± 1.75</td><td class="num">5.29</td></tr>
+              <tr><td>Feasible area greedy</td><td class="num">99.55 ± 0.07</td><td class="num">22.70 ± 0.63</td><td class="num">1.93</td></tr>
+              <tr class="hl"><td>FOV + reinitialization (full)</td><td class="num">99.63 ± 0.12</td><td class="num">22.72 ± 0.67</td><td class="num">4.55</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">
+          <p><b>Reading these numbers.</b> Five of the eight methods land between 99.3% and 99.6%, so this scenario is close to saturated. Against feasible greedy, the full method's gain is small (+0.08 pp, 95% CI [0.03, 0.13]) and observation age does not improve. The clear gains are over point-based and strip-survey planning. The naive planner is fragile to the planning grid (99.5% → 73.0% at 1 m on seed 0), while the full method stays at 99.6–99.7%. These are simulation results on one map, not flight tests. The numbers in the 2025 paper came from an earlier implementation, and this table replaces them.</p>
+        </div>
+      </article>
+
+      <!-- ============================================================ RA-L -->
+      <article class="project" id="ral">
+        <p class="eyebrow">IEEE RA-L 2025</p>
+        <h2>The persistent robot charging problem</h2>
+        <p class="cite">N. Kumar, <b>J. J. Lee</b>, S. Rathinam, S. Darbha, P. B. Sujit, R. Raman. IEEE Robotics and Automation Letters, 10(3):2191–2198, 2025.</p>
+        <div class="links-row" style="margin:0 0 8px">
+          <a class="btn sm" href="https://ieeexplore.ieee.org/document/10819616/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Paper</a>
+          <a class="btn sm" href="https://arxiv.org/abs/2409.00572"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>arXiv</a>
+          <a class="btn sm" href="https://github.com/jkleecontrols/persistent-robot-charging"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>Code</a>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h3>Problem</h3>
+            <p>A fleet of heterogeneous robots must recharge periodically, each with its own charging and working time. How few charging stations can keep every robot running indefinitely? And if stations are limited, which robots should work, and when?</p>
+          </div>
+          <div>
+            <h3>Approach</h3>
+            <ul>
+              <li>Times are normalized by their GCD; the schedule repeats over the LCM of the cycle times.</li>
+              <li>An ILP picks each robot's initial partial charge to minimize stations, or to maximize working time on a fixed number of stations.</li>
+              <li>Small safety margins shrink the LCM horizon; a Dijkstra search over candidate cycle times finds them.</li>
+              <li>A late robot is re-scheduled locally while the others keep their plans.</li>
+            </ul>
+            <p class="small muted">My part: the ILP scheduling models, waiting-time comparison studies, UAV simulations and the open-source <code>pcsim</code> package.</p>
+          </div>
+        </div>
+
+        <figure>
+          <img src="img/research/ral/charging_schedule.png" alt="Charging schedule for three UAVs on two pads, original and with UAV2 delayed by two minutes" loading="lazy">
+          <figcaption>Schedule computed by <code>pcsim</code> for three UAVs on two pads. (a) Optimal schedule. (b) UAV2 is delayed 2 minutes and re-scheduled without changing UAV1 or UAV7.</figcaption>
+        </figure>
+
+        <h3>Reproduction</h3>
+        <p>The Sec. VI case study is regenerated from robot parameters alone, with no hand-coded schedule, and matches every published value. The Python Dijkstra-LCM search reproduces rows 1–7, 9 and 10 of Table I. 23 regression tests pin these results.</p>
+        <div class="stats">
+          <div class="stat"><div class="num">29,260 → 36</div><div class="label">schedule horizon (min) after 20% safety margins</div></div>
+          <div class="stat"><div class="num">58 min</div><div class="label">flight per 36-min cycle, 3 of 7 UAVs on 2 stations</div></div>
+          <div class="stat"><div class="num">min 10 → 3</div><div class="label">re-scheduled charging slot for a UAV delayed 2 min</div></div>
+        </div>
+        <figure>
+          <video controls muted playsinline preload="none" poster="img/research/ral/simulation_poster.jpg">
+            <source src="img/research/ral/simulation.mp4" type="video/mp4">
+          </video>
+          <figcaption>Original and delayed schedules side by side over one 36-minute horizon: pad occupancy, battery and routes.</figcaption>
+        </figure>
+      </article>
+
+      <!-- ============================================================ AIAA -->
+      <article class="project" id="aiaa">
+        <p class="eyebrow">AIAA SciTech 2024 · DEVCOM Army Research Laboratory</p>
+        <h2>Meta-heuristic path planning for aerial–ground teams</h2>
+        <p class="cite"><b>J. J. Lee</b>, S. Rathinam. “A Meta-Heuristic Approach for an Aerial-Ground Vehicle Path Planning Problem,” AIAA SciTech Forum, 2024. In collaboration with J. Humann and J. Dotterweich (DEVCOM ARL).</p>
+        <div class="links-row" style="margin:0 0 8px">
+          <a class="btn sm" href="https://arc.aiaa.org/doi/10.2514/6.2024-0230"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Paper</a>
+          <a class="btn sm" href="img/researches/metaheuri/FinalPaper_A_Meta_Heuristic_Approach_for_an_Aerial_Ground_Vehicle_Path_Planning_Problem.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>PDF</a>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h3>Problem</h3>
+            <p>Three battery-limited UAVs and one road-bound UGV that recharges them must keep revisiting 194 nodes (190 road points and 4 areas of interest) in a 20 km × 20 km area for 72 hours. A node's reward grows with the time since its last visit. This is a variant of the NP-hard team orienteering problem (TOP).</p>
+          </div>
+          <div>
+            <h3>Approach</h3>
+            <ol>
+              <li>Greedy insertion builds the initial routes.</li>
+              <li>Improvement loop: 2-point exchange, one-point movement, 2-opt and rearrangement along the road order.</li>
+              <li>Tabu-search re-initialization leaves local optima.</li>
+              <li>Reattachment revisits nodes that a later leg passes close to.</li>
+            </ol>
+            <p>A UAV–UGV scheduling rule then chains sorties and charging over the 72-hour mission.</p>
+          </div>
+        </div>
+
+        <figure>
+          <video controls muted playsinline preload="none" poster="img/research/aiaa/sim72_meta_full_72h_poster.jpg">
+            <source src="img/research/aiaa/sim72_meta_full_72h.mp4" type="video/mp4">
+          </video>
+          <figcaption>72-hour corridor mission with the full meta-heuristic: UAV routes, UGV position, node-freshness heat map and battery states.</figcaption>
+        </figure>
+
+        <h3>Measured results (2026 re-implementation)</h3>
+        <div class="stats">
+          <div class="stat"><div class="num">≤ 4.8%</div><div class="label">mean optimality gap vs. CP-SAT proven optima (single sortie, 9 configurations)</div></div>
+          <div class="stat"><div class="num">+48%</div><div class="label">node visits over greedy in the 72-h mission (16,539 vs 11,183)</div></div>
+          <div class="stat"><div class="num">+11–12%</div><div class="label">visits over greedy in a 104-min window (20- and 30-target sets)</div></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>104-min window, 3 UAVs (visits, mean of 10 seeds)</th><th class="num">20 targets</th><th class="num">30 targets</th></tr></thead>
+            <tbody>
+              <tr><td>Greedy (Dijkstra-style)</td><td class="num">58.0</td><td class="num">69.0</td></tr>
+              <tr><td>Meta-heuristic without rearrangement/reattachment</td><td class="num">58.3</td><td class="num">66.4</td></tr>
+              <tr><td>+ Rearrangement</td><td class="num">61.7</td><td class="num">69.3</td></tr>
+              <tr class="hl"><td>+ Reattachment (full method)</td><td class="num">64.7</td><td class="num">77.3</td></tr>
+              <tr><td>Greedy + reattachment (control)</td><td class="num">72.0</td><td class="num">81.0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="two-col">
+          <figure>
+            <img src="img/research/aiaa/fig_rearrange_before_after.png" alt="Routes without and with rearrangement for the same seed" loading="lazy">
+            <figcaption>Same sortie without and with rearrangement (67 vs 76 targets).</figcaption>
+          </figure>
+          <figure>
+            <img src="img/research/aiaa/fig_72h_snapshots.png" alt="Snapshots of the 72-hour mission at 6, 24, 48 and 72 hours" loading="lazy">
+            <figcaption>Mission snapshots at 6, 24, 48 and 72 hours.</figcaption>
+          </figure>
+        </div>
+        <div class="note">
+          <p><b>Limitations.</b> In the short 104-minute window, greedy routes with reattachment added score higher than the full method (72 vs 64.7 and 81 vs 77.3). Each sortie saturates at 4–5 distinct targets, so these instances are too small for tabu search to matter and the differences come from revisits. Over the full 72-hour mission the meta-heuristic is best on every metric: the most visits, the lowest staleness score (−2.0% vs greedy) and 77.7 min mean time between visits. One area of interest cannot be reached under the road-rendezvous rule. These re-run numbers differ from those in the 2024 paper.</p>
+        </div>
+      </article>
+
+      <!-- ============================================================ ongoing -->
+      <article class="project" id="ongoing">
+        <p class="eyebrow">Dissertation · in progress</p>
+        <h2>Ongoing work</h2>
+        <p>My dissertation brings these pieces into one framework for long-duration multi-robot missions: charging schedules as the energy backbone (RA-L), routing with mobile recharging (AIAA) and camera-aware coverage (ICUAS). Current work models the camera itself, including ground sampling distance, gimbal tilt and altitude, so that coverage paths cut overlapping footage and wasted flight time. I also work on task allocation for a Clearpath UGV with a UR5 manipulator.</p>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>&copy; <span id="year">2026</span> Jaekyung (Jackie) Lee</div>
+      <div class="footer-links">
+        <a href="mailto:jkleecontrols@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=jQmefb4AAAAJ&hl=en">Google Scholar</a>
+        <a href="https://github.com/jkleecontrols">GitHub</a>
+        <a href="https://www.linkedin.com/in/jackie-lee-55b558213/">LinkedIn</a>
+        <a href="blog.html">Blog</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
