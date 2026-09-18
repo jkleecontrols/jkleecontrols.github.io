@@ -10,14 +10,14 @@
   <meta property="og:description" content="Research on planning and scheduling for battery-limited multi-robot systems: UAV-UGV coverage, persistent robot charging, and meta-heuristic routing.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jkleecontrols.github.io/research.html">
-  <meta property="og:image" content="https://jkleecontrols.github.io/img/profile/headshot.jpg">
+  <meta property="og:image" content="https://jkleecontrols.github.io/images/profile/headshot.jpg">
   <link rel="canonical" href="https://jkleecontrols.github.io/research.html">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237a1f2b'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EJL%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/site.css">
-  <script src="assets/site.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDM6Z2R0L0"></script>
   <script>
@@ -87,8 +87,8 @@
         </div>
 
         <figure>
-          <video controls muted playsinline preload="none" poster="img/research/icuas/comparison_poster.jpg">
-            <source src="img/research/icuas/comparison.mp4" type="video/mp4">
+          <video controls muted playsinline preload="none" poster="images/research/icuas/comparison-poster.jpg">
+            <source src="images/research/icuas/comparison.mp4" type="video/mp4">
           </video>
           <figcaption>Same camera and charging schedule, three planners (naive area, feasible greedy, FOV + reinitialization). 102 simulated minutes in 60 seconds; blue shading is observed area.</figcaption>
         </figure>
@@ -147,7 +147,7 @@
         </div>
 
         <figure>
-          <img src="img/research/ral/charging_schedule.png" alt="Charging schedule for three UAVs on two pads, original and with UAV2 delayed by two minutes" loading="lazy">
+          <img src="images/research/ral/charging-schedule.png" alt="Charging schedule for three UAVs on two pads, original and with UAV2 delayed by two minutes" loading="lazy">
           <figcaption>Schedule computed by <code>pcsim</code> for three UAVs on two pads. (a) Optimal schedule. (b) UAV2 is delayed 2 minutes and re-scheduled without changing UAV1 or UAV7.</figcaption>
         </figure>
 
@@ -159,8 +159,8 @@
           <div class="stat"><div class="num">min 10 → 3</div><div class="label">re-scheduled charging slot for a UAV delayed 2 min</div></div>
         </div>
         <figure>
-          <video controls muted playsinline preload="none" poster="img/research/ral/simulation_poster.jpg">
-            <source src="img/research/ral/simulation.mp4" type="video/mp4">
+          <video controls muted playsinline preload="none" poster="images/research/ral/simulation-poster.jpg">
+            <source src="images/research/ral/simulation.mp4" type="video/mp4">
           </video>
           <figcaption>Original and delayed schedules side by side over one 36-minute horizon: pad occupancy, battery and routes.</figcaption>
         </figure>
@@ -173,7 +173,7 @@
         <p class="cite"><b>J. J. Lee</b>, S. Rathinam. “A Meta-Heuristic Approach for an Aerial-Ground Vehicle Path Planning Problem,” AIAA SciTech Forum, 2024. In collaboration with J. Humann and J. Dotterweich (DEVCOM ARL).</p>
         <div class="links-row" style="margin:0 0 8px">
           <a class="btn sm" href="https://arc.aiaa.org/doi/10.2514/6.2024-0230"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Paper</a>
-          <a class="btn sm" href="img/researches/metaheuri/FinalPaper_A_Meta_Heuristic_Approach_for_an_Aerial_Ground_Vehicle_Path_Planning_Problem.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>PDF</a>
+          <a class="btn sm" href="files/papers/Lee_Rathinam_AIAA_SciTech_2024.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>PDF</a>
         </div>
 
         <div class="two-col">
@@ -194,8 +194,8 @@
         </div>
 
         <figure>
-          <video controls muted playsinline preload="none" poster="img/research/aiaa/sim72_meta_full_72h_poster.jpg">
-            <source src="img/research/aiaa/sim72_meta_full_72h.mp4" type="video/mp4">
+          <video controls muted playsinline preload="none" poster="images/research/aiaa/sim72-meta-full-72h-poster.jpg">
+            <source src="images/research/aiaa/sim72-meta-full-72h.mp4" type="video/mp4">
           </video>
           <figcaption>72-hour corridor mission with the full meta-heuristic: UAV routes, UGV position, node-freshness heat map and battery states.</figcaption>
         </figure>
@@ -220,11 +220,11 @@
         </div>
         <div class="two-col">
           <figure>
-            <img src="img/research/aiaa/fig_rearrange_before_after.png" alt="Routes without and with rearrangement for the same seed" loading="lazy">
+            <img src="images/research/aiaa/fig-rearrange-before-after.png" alt="Routes without and with rearrangement for the same seed" loading="lazy">
             <figcaption>Same sortie without and with rearrangement (67 vs 76 targets).</figcaption>
           </figure>
           <figure>
-            <img src="img/research/aiaa/fig_72h_snapshots.png" alt="Snapshots of the 72-hour mission at 6, 24, 48 and 72 hours" loading="lazy">
+            <img src="images/research/aiaa/fig-72h-snapshots.png" alt="Snapshots of the 72-hour mission at 6, 24, 48 and 72 hours" loading="lazy">
             <figcaption>Mission snapshots at 6, 24, 48 and 72 hours.</figcaption>
           </figure>
         </div>

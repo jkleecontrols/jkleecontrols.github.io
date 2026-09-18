@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | Jackie Lee</title>
+  <meta name="robots" content="noindex">
+  <script>
+    // Old URLs from the previous version of the site
+    var moved = {
+      '/CV/042224_UpdatedCV.pdf': '/files/Jackie_Lee_CV.pdf',
+      '/CV/CV_JackieLee.pdf': '/files/Jackie_Lee_CV.pdf',
+      '/CV/Resume_JackieLee.pdf': '/files/Jackie_Lee_Resume.pdf',
+      '/CV/Resume_Jaekyung Lee_2pages.pdf': '/files/Jackie_Lee_Resume.pdf',
+      '/CV/Resume_Jaekyung Lee_Tesla.pdf': '/files/Jackie_Lee_Resume.pdf',
+      '/img/researches/metaheuri/FinalPaper_A_Meta_Heuristic_Approach_for_an_Aerial_Ground_Vehicle_Path_Planning_Problem.pdf': '/files/papers/Lee_Rathinam_AIAA_SciTech_2024.pdf',
+      '/post_ams.html': '/projects/carbon-fiber-drone.html',
+      '/post_kibwa18.html': '/projects/solar-panel-diagnosis.html',
+      '/post_kibwa19.html': '/projects/hidden-camera-detection.html',
+      '/post_metaheuri.html': '/research.html#aiaa',
+      '/post_mortar.html': '/projects/foldable-drone.html',
+      '/post_nura.html': '/projects/rocket-competition.html',
+      '/post_pavcontest.html': '/projects/pav-evtol.html',
+      '/post_startup.html': '/projects/modular-drone-kit.html',
+      '/post_ukc2024.html': '/projects/ukc2024-poster.html',
+      '/publication.html': '/publications.html',
+      '/research_interest.html': '/research.html',
+      '/single.html': '/'
+    };
+    var path = decodeURIComponent(location.pathname);
+    if (moved[path]) location.replace(moved[path] + location.hash);
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site.js"></script>
+</head>
+<body>
+  <main>
+    <div class="container" style="text-align:center;padding:80px 0">
+      <p class="eyebrow">404</p>
+      <h1>Page not found</h1>
+      <p class="lead" style="margin:0 auto 24px">The page may have moved when the site was reorganized.</p>
+      <a class="btn primary" href="/">Go to homepage</a>
+    </div>
+  </main>
+</body>
+</html>
