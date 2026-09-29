@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Symphony Local | Jackie Lee</title>
+  <meta name="description" content="A kanban board that watches the AI coding sessions running on your own machine, instead of asking you to update it.">
+  <meta name="author" content="Jaekyung (Jackie) Lee">
+  <meta property="og:title" content="Symphony Local">
+  <meta property="og:description" content="A kanban board that watches the AI coding sessions running on your own machine, instead of asking you to update it.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jkleecontrols.github.io/projects/symphony-local.html">
+  <meta property="og:image" content="https://jkleecontrols.github.io/images/projects/symphony/board.jpg">
+  <link rel="canonical" href="https://jkleecontrols.github.io/projects/symphony-local.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237a1f2b'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EJL%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/scene.js" defer></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDM6Z2R0L0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XDM6Z2R0L0');
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">Jackie Lee</a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../cv.html">CV</a>
+        <a href="../projects.html" aria-current="page">Projects</a>
+        <a href="../notes.html">Notes</a>
+        <a href="../blog.html">Life</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <article class="post">
+        <a class="back" href="../projects.html">← All projects</a>
+        <p class="eyebrow">Software · September 2026 · Open source, MIT</p>
+        <h1>Symphony Local</h1>
+        <div class="post-meta">A kanban board that watches my AI coding sessions instead of asking me to update it.</div>
+
+        <div class="links-row" style="margin:0 0 20px">
+          <a class="btn primary" href="https://github.com/jkleecontrols/symphony-kanban"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>Source and setup on GitHub</a>
+        </div>
+
+        <figure>
+          <img src="../images/projects/symphony/board.jpg" alt="The Symphony Local board with example task cards in Ready, In Progress, Human Review and Done columns" loading="lazy">
+          <figcaption>The board with example tasks. Each card is a project folder, and the column is whatever the session in that folder is actually doing.</figcaption>
+        </figure>
+
+        <h2>Why I built it</h2>
+        <p>I usually have Claude Code or Codex running in several folders at once — a paper, a simulation, this website. Nothing told me which one was blocked on a question, which had finished, or whether what it did still passed the project's own checks, so I kept walking through terminals one at a time.</p>
+        <p>A normal kanban board did not help: it is a second thing to keep in sync, and it drifts within a day. So this one reads the machine instead. I never move the cards.</p>
+
+        <h2>What it does</h2>
+        <ul>
+          <li>Each card is a project folder, and the agent for that card runs with the folder as its working directory.</li>
+          <li>The column follows the session: <b>In Progress</b> while a turn runs, <b>Human Review</b> when it stopped to ask something, <b>Ready</b> when it is open and idle, <b>Done</b> when the process is gone.</li>
+          <li>A desktop notification when a session needs an answer, so the board does not have to stay open.</li>
+          <li>Finished runs record what changed in git and whether the project's own check command still passes — the pass and fail panels in the screenshot above.</li>
+          <li>Agents are shell commands in a config file, so different cards can run different CLIs. Claude Code and Codex CLI are wired up; aider and goose are detected.</li>
+          <li>An independent implementation of the <a href="https://github.com/openai/symphony">OpenAI Symphony</a> service specification.</li>
+        </ul>
+
+        <h2>Trying it</h2>
+        <p>Node 20 or newer, and nothing else — no npm dependencies, and tasks live in a local JSON file. Clone the repository, copy the example task file, run <code>npm start</code>, and open <code>127.0.0.1:8787</code>. Whichever AI CLI you want to dispatch has to be installed and signed in already.</p>
+
+        <div class="note">
+          <p><b>It is early, and built around my own setup.</b> Notifications and session detection use macOS tools, the server binds to localhost with no authentication, and auto-dispatch does not sandbox an agent — the git guard makes its changes visible and reversible, but it is not a fence. The board also renders snippets of session transcripts, so it shows conversation text on screen. It works and it is documented, but nobody else has run it yet. If you try it, I would genuinely like to hear what breaks.</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>&copy; <span id="year">2026</span> Jaekyung (Jackie) Lee</div>
+      <div class="footer-links">
+        <a href="mailto:jkleecontrols@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=jQmefb4AAAAJ&hl=en">Google Scholar</a>
+        <a href="https://github.com/jkleecontrols">GitHub</a>
+        <a href="https://www.linkedin.com/in/jackie-lee-55b558213/">LinkedIn</a>
+        <a href="../blog.html">Life</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
