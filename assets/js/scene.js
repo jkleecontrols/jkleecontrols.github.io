@@ -67,8 +67,13 @@
     document.documentElement.classList.add('has-rover');
   }
 
+  // The scene is scaled down on small screens, so measure it rather than the window.
+  function sceneWidth() {
+    return scene.clientWidth || window.innerWidth;
+  }
+
   function driveWidth() {
-    return Math.max(0, window.innerWidth - UGV_W - MARGIN * 2);
+    return Math.max(0, sceneWidth() - UGV_W - MARGIN * 2);
   }
 
   function scrollProgress() {
@@ -93,7 +98,7 @@
     var targetUgv = MARGIN + scrollProgress() * driveWidth();
 
     if (exiting) {
-      targetUgv = window.innerWidth + 160;
+      targetUgv = sceneWidth() + 160;
     } else if (entering && Math.abs(ugvX - targetUgv) < 2) {
       entering = false;
     }
@@ -115,7 +120,7 @@
     var targetY = PAD_TOP;
 
     if (exiting) {
-      targetDroneX = window.innerWidth + 200;
+      targetDroneX = sceneWidth() + 200;
       targetY = HOVER + 26;
     } else if (!wantsPad) {
       targetY = HOVER + Math.sin(now / 460) * 5;
