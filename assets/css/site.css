@@ -286,6 +286,20 @@ tr.hl td { background: var(--accent-soft); font-weight: 600; }
 .post [style*="flex: 1"], .post [style*="flex:1"] { flex: 1 1 260px !important; min-width: 0; padding: 0 !important; text-align: left !important; }
 .post table { white-space: normal; }
 
+/* ---------- photo pages (blog.html) ---------- */
+.life-intro { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: center; margin-bottom: 56px; }
+@media (max-width: 760px) { .life-intro { grid-template-columns: 1fr; gap: 20px; } }
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin: 20px 0 0; }
+.photo-grid figure { margin: 0; }
+.photo-grid img, .photo-grid video {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  border-radius: 10px; border: 1px solid var(--border); background: var(--bg-soft);
+}
+.photo-grid .tall img, .photo-grid .tall video { aspect-ratio: 3 / 4; }
+.photo-grid figcaption { font-size: .85rem; color: var(--text-muted); margin-top: 7px; line-height: 1.45; }
+.photo-grid.wide { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.photo-grid.single { grid-template-columns: minmax(0, 340px); }
+
 /* ---------- UGV + UAV scene (assets/js/scene.js) ---------- */
 .rover-scene {
   position: fixed; left: 0; right: 0; bottom: 0; height: 132px;
@@ -327,8 +341,9 @@ tr.hl td { background: var(--accent-soft); font-weight: 600; }
 }
 
 @media (max-width: 760px) {
-  .rover-scene { height: 104px; transform: scale(.78); transform-origin: left bottom; width: 128%; }
-  .has-rover body { padding-bottom: 76px; }
+  /* keep the full height so the airborne drone is not clipped; the scale shrinks it */
+  .rover-scene { height: 132px; transform: scale(.78); transform-origin: left bottom; width: 128%; }
+  .has-rover body { padding-bottom: 88px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .rover-scene { display: none; }

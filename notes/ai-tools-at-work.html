@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The year my employers started asking me to use AI | Jackie Lee</title>
+  <meta name="description" content="Enterprise policy on AI coding tools flipped between 2023 and 2026. What I saw across two engineering internships, what the surveys say, and what I still check by hand.">
+  <meta name="author" content="Jaekyung (Jackie) Lee">
+  <meta property="og:title" content="The year my employers started asking me to use AI">
+  <meta property="og:description" content="Enterprise policy on AI coding tools flipped between 2023 and 2026. What I saw across two engineering internships, what the surveys say, and what I still check by hand.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jkleecontrols.github.io/notes/ai-tools-at-work.html">
+  <meta property="og:image" content="https://jkleecontrols.github.io/images/notes/code-screen.jpg">
+  <link rel="canonical" href="https://jkleecontrols.github.io/notes/ai-tools-at-work.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237a1f2b'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EJL%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/scene.js" defer></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDM6Z2R0L0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XDM6Z2R0L0');
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">Jackie Lee</a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../cv.html">CV</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../notes.html" aria-current="page">Notes</a>
+        <a href="../blog.html">Life</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <article class="post">
+        <a class="back" href="../notes.html">← All notes</a>
+        <p class="eyebrow">Note · September 2026</p>
+        <h1>The year my employers started asking me to use AI</h1>
+        <div class="post-meta">Jaekyung (Jackie) Lee · about 7 minutes</div>
+
+        <figure>
+          <img src="../images/notes/code-screen.jpg" alt="Source code on a monitor" loading="lazy">
+          <figcaption>Photo: Chris Ried / Unsplash.</figcaption>
+        </figure>
+
+        <p>Two summers ago, the safest answer to “can I use an AI assistant for this?” inside a large company was no. Not because the tools were bad — Copilot and Cursor were already good — but because nobody wanted to be the engineer who pasted proprietary code into someone else's server. By the time I started my second industry internship, the question had inverted. The interesting part is not that the tools improved. It is that the <em>policy</em> moved, and policy moves much more slowly than models do.</p>
+
+        <h2>What the rules used to be</h2>
+
+        <p>The restrictive era had a specific trigger. In April 2023, engineers in Samsung's semiconductor division pasted source code and internal meeting content into ChatGPT in three separate incidents within about twenty days; Samsung restricted generative AI on company devices shortly after (<a href="https://www.cnbc.com/2023/05/02/samsung-bans-use-of-ai-like-chatgpt-for-staff-after-misuse-of-chatbot.html">CNBC</a>). Within weeks, Apple restricted ChatGPT and, notably for engineers, GitHub Copilot (<a href="https://www.macrumors.com/2023/05/19/apple-bans-employees-from-using-chatgpt/">MacRumors, reporting the Wall Street Journal</a>). JPMorgan Chase had already limited ChatGPT internally earlier that year (<a href="https://aibusiness.com/verticals/some-big-companies-banning-staff-use-of-chatgpt">AI Business</a>).</p>
+
+        <p>Three separate objections were bundled into that single “no”:</p>
+        <ul>
+          <li><b>Data boundary.</b> Prompts left the building, and nobody could promise they were not training data.</li>
+          <li><b>Provenance.</b> If a model reproduced licensed code, who owned the result?</li>
+          <li><b>Trust.</b> The output looked confident and was sometimes wrong, and no one had a review process sized for that.</li>
+        </ul>
+
+        <p>Only the third objection is really about the technology. The first two are about contracts and deployment — and those are exactly the ones that got solved first.</p>
+
+        <h2>What I saw, two summers apart</h2>
+
+        <p>I spent 2025 at Amazon Robotics in North Reading and 2026 at Magna Electronics in Lowell. I am not going to describe either company's internal systems; both were covered by confidentiality agreements, and the point does not require them. What I can describe is the shape of the change. In the first summer, AI assistance was something you were careful about and asked about. In the second, it was simply part of the environment I was onboarded into: approved tools, a sanctioned place to use them, and an expectation that I would.</p>
+
+        <p>The public record shows the same shift at the corporate level. In November 2025, Reuters reported on an internal Amazon memo, signed by two senior vice presidents, that standardized engineering on Kiro — the company's in-house AI coding tool — told teams no further third-party AI development tools would be approved, and set a target for weekly use across engineering (<a href="https://finance.yahoo.com/news/amazon-pushes-house-ai-coding-002909022.html">Reuters, via Yahoo Finance</a>). On the automotive side, Magna's 2026 Annual Information Form lists artificial intelligence among its corporate R&amp;D projects, including “generative engineering tools,” advanced robotics, inspection systems and digital twin simulation (<a href="https://www.magna.com/docs/default-source/corporate-governance/disclosure-documents_2026/magna-2026-annual-information-form.pdf">Magna, 2026 AIF</a>). A supplier that ships ADAS software into production vehicles now discusses generative tooling in the same document it uses to disclose risk to investors. That is not a pilot program.</p>
+
+        <p>Notice what the Amazon memo is actually about. It is not “use AI.” It is “use <em>this</em> AI.” The restriction did not disappear; it moved from the capability to the vendor. That is what a solved data-boundary problem looks like from the inside: procurement, not prohibition.</p>
+
+        <figure>
+          <img src="../images/blog/magna-internship/04-img-8414.jpg" alt="Carrying a camera calibration target across a parking lot" loading="lazy">
+          <figcaption>The other half of the job. No assistant carries the calibration target across the parking lot, and no model tells you the extrinsics are wrong — the vehicle does, later.</figcaption>
+        </figure>
+
+        <h2>The numbers, and the part people skip</h2>
+
+        <p>Adoption is no longer the interesting statistic. Google's 2025 DORA report, based on responses from nearly 5,000 technology professionals, found that 90% now use AI at work, up about 14 percentage points year over year, with a median of two hours of daily interaction (<a href="https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report">DORA 2025</a>). Stack Overflow's 2025 survey put it at 84% using or planning to use AI tools, with 47% using them daily (<a href="https://survey.stackoverflow.co/2025/">Stack Overflow 2025</a>).</p>
+
+        <div class="stats">
+          <div class="stat"><div class="num">90%</div><div class="label">of technology professionals use AI at work (DORA 2025)</div></div>
+          <div class="stat"><div class="num">2 h</div><div class="label">median daily interaction with AI tools (DORA 2025)</div></div>
+          <div class="stat"><div class="num">29%</div><div class="label">trust AI output to be accurate, down from 40% in 2024 (Stack Overflow)</div></div>
+          <div class="stat"><div class="num">45%</div><div class="label">say they lose significant time debugging AI-generated code (Stack Overflow)</div></div>
+        </div>
+
+        <p>The part people skip is the second column. In the same DORA survey, 30% report little or no trust in AI-generated code. Stack Overflow's trust numbers went <em>down</em> while usage went up: 29% trust the accuracy of the output, against 40% a year earlier, and 66% describe AI answers as “almost right, but not quite” (<a href="https://stackoverflow.blog/2025/12/29/developers-remain-willing-but-reluctant-to-use-ai-the-2025-developer-survey-results-are-here/">Stack Overflow</a>). Almost-right is the expensive failure mode. A wrong answer gets deleted in a minute; a plausible one gets reviewed, merged, and found three weeks later by a test that was also generated.</p>
+
+        <p>So the honest summary of 2026 is not “AI writes the code now.” It is: nearly everyone uses it, fewer people trust it than last year, and organizations moved anyway. Companies did not wait for trust. They waited for a deployment they could audit.</p>
+
+        <h2>What changes in safety-critical work</h2>
+
+        <p>My research is on planning and scheduling for robots with real battery limits, and my industry work has been on perception and control for machines that move near people and property. In that setting, typing was never the bottleneck. Verification was. An assistant that writes a ROS 2 node in thirty seconds does not shorten the week if the week is spent proving the node behaves under sensor noise, dropped frames and a turn-rate limit.</p>
+
+        <p>What it does change is where my hours go. The tools have been genuinely useful for bring-up documentation, build and container configuration, test scaffolding, log parsing and the tedious middle of a driver port. They are least useful exactly where I would most want them: anything whose correctness depends on the physical system in front of me. A model will happily produce a calibration routine that compiles and is subtly wrong about a coordinate frame, and the only way to find out is to put the board on the car and drive it.</p>
+
+        <p>The practices I have settled on are unglamorous:</p>
+        <ul>
+          <li><b>Treat output as a draft from a fast intern.</b> Useful, confident, unverified. It gets reviewed like any other patch — by me — before anyone else spends time on it.</li>
+          <li><b>Never delegate the invariant.</b> Whatever the safety argument rests on — the turn-rate bound, the battery reserve, the stop condition — gets written and checked by hand.</li>
+          <li><b>Keep the data boundary explicit.</b> Approved tools only, and a habit of knowing what is in the prompt before it leaves my machine. That rule did not become obsolete when the policy relaxed; it is the reason the policy could relax.</li>
+          <li><b>Distrust generated tests most of all.</b> A test written from the same misunderstanding as the code will agree with it perfectly.</li>
+        </ul>
+
+        <h2>Where I think this goes</h2>
+
+        <p>The 2023 question was “am I allowed to use this?” The 2026 question is “can you show what it did?” Agentic tools that edit repositories and run commands raise the stakes of the second question considerably: permissions, logs and blast radius start to matter more than model quality. In regulated domains, I expect the artifact that matters will not be the generated code but the evidence trail around it — what was generated, which human reviewed it, which test covers it, and what happens when it is wrong.</p>
+
+        <p>That is a less exciting story than the headlines, and it is the one I would bet on. The interesting engineering question of this decade is not how much code a model can write. It is how we prove that a system built this way is safe — and that question gets answered by people who are careful, not by people who are fast.</p>
+
+        <h2>Sources</h2>
+        <ul class="small">
+          <li><a href="https://www.cnbc.com/2023/05/02/samsung-bans-use-of-ai-like-chatgpt-for-staff-after-misuse-of-chatbot.html">Samsung bans use of AI like ChatGPT for staff after misuse of chatbot</a> — CNBC, May 2023.</li>
+          <li><a href="https://www.macrumors.com/2023/05/19/apple-bans-employees-from-using-chatgpt/">Apple restricts employee use of ChatGPT and GitHub Copilot</a> — MacRumors, reporting the Wall Street Journal, May 2023.</li>
+          <li><a href="https://aibusiness.com/verticals/some-big-companies-banning-staff-use-of-chatgpt">Large companies restricting staff use of ChatGPT</a> — AI Business, 2023.</li>
+          <li><a href="https://finance.yahoo.com/news/amazon-pushes-house-ai-coding-002909022.html">Amazon pushes in-house AI coding tool Kiro over competitors', memo shows</a> — Reuters via Yahoo Finance, November 2025.</li>
+          <li><a href="https://www.magna.com/docs/default-source/corporate-governance/disclosure-documents_2026/magna-2026-annual-information-form.pdf">Magna International, 2026 Annual Information Form</a> — corporate R&amp;D and AI-enabled solutions.</li>
+          <li><a href="https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report">Announcing the 2025 DORA report</a>, with further analysis at <a href="https://dora.dev/insights/balancing-ai-tensions/">dora.dev</a> — Google Cloud, 2025.</li>
+          <li><a href="https://survey.stackoverflow.co/2025/">2025 Stack Overflow Developer Survey</a> and <a href="https://stackoverflow.blog/2025/12/29/developers-remain-willing-but-reluctant-to-use-ai-the-2025-developer-survey-results-are-here/">the accompanying write-up</a>.</li>
+        </ul>
+
+        <p class="small muted">This note describes publicly reported facts and my own opinions. It does not describe confidential systems, tooling or data belonging to any employer.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>&copy; <span id="year">2026</span> Jaekyung (Jackie) Lee</div>
+      <div class="footer-links">
+        <a href="mailto:jkleecontrols@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=jQmefb4AAAAJ&hl=en">Google Scholar</a>
+        <a href="https://github.com/jkleecontrols">GitHub</a>
+        <a href="https://www.linkedin.com/in/jackie-lee-55b558213/">LinkedIn</a>
+        <a href="../blog.html">Life</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
