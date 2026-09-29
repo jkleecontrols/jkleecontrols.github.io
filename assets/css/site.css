@@ -285,3 +285,56 @@ tr.hl td { background: var(--accent-soft); font-weight: 600; }
 .post [style*="display: flex"], .post [style*="display:flex"] { flex-wrap: wrap; gap: 16px; }
 .post [style*="flex: 1"], .post [style*="flex:1"] { flex: 1 1 260px !important; min-width: 0; padding: 0 !important; text-align: left !important; }
 .post table { white-space: normal; }
+
+/* ---------- UGV + UAV scene (assets/js/scene.js) ---------- */
+.rover-scene {
+  position: fixed; left: 0; right: 0; bottom: 0; height: 132px;
+  pointer-events: none; z-index: 30; overflow: hidden;
+  color: var(--text-muted); opacity: .72;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+}
+.rover-scene::after {   /* the ground the UGV drives on */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 11px;
+  border-bottom: 1px dashed var(--border);
+}
+.has-rover body { padding-bottom: 104px; }
+
+.rover-ugv, .rover-drone { position: absolute; bottom: 12px; left: 0; will-change: transform; }
+.rover-ugv { width: 78px; }
+.rover-drone { width: 54px; color: var(--accent); }
+.rover-scene.is-low .rover-drone { animation: rover-blink 1.1s ease-in-out infinite; }
+
+.rover-pad { color: var(--accent); }
+.rover-charge { opacity: 0; color: var(--accent); }
+.rover-scene.is-charging .rover-charge { animation: rover-charge 1.4s ease-in-out infinite; }
+.rover-batt-shell { opacity: .55; }
+
+.rover-rotor { transform-origin: center; animation: rover-spin .18s linear infinite; }
+.rover-scene.is-landed .rover-rotor { animation-duration: .9s; opacity: .5; }
+
+@keyframes rover-spin {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(.25); }
+}
+@keyframes rover-charge {
+  0%, 100% { opacity: 0; }
+  50% { opacity: .9; }
+}
+@keyframes rover-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .45; }
+}
+
+@media (max-width: 760px) {
+  .rover-scene { height: 104px; transform: scale(.78); transform-origin: left bottom; width: 128%; }
+  .has-rover body { padding-bottom: 76px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rover-scene { display: none; }
+  .has-rover body { padding-bottom: 0; }
+}
+@media print {
+  .rover-scene { display: none; }
+  .has-rover body { padding-bottom: 0; }
+}
