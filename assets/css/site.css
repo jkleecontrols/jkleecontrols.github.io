@@ -192,6 +192,59 @@ a.card:hover { text-decoration: none; transform: translateY(-2px); border-color:
 .card p { font-size: .9rem; color: var(--text-muted); margin: 0; }
 .card .venue { font-family: var(--font-mono); font-size: .74rem; color: var(--accent); letter-spacing: .04em; margin-bottom: 8px; }
 
+/* ---------- featured card (newest project) ---------- */
+.card.featured { grid-column: 1 / -1; flex-direction: row; position: relative; }
+.card.featured .thumb { flex: 0 0 46%; aspect-ratio: auto; border-bottom: 0; border-right: 1px solid var(--border); }
+.card.featured .body { justify-content: center; padding: 26px 28px; }
+.card.featured h3 { font-size: 1.35rem; margin-bottom: 8px; }
+.card.featured p { font-size: .96rem; }
+
+.badge-new {
+  display: inline-block; align-self: flex-start;
+  font-family: var(--font-mono); font-size: .68rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 999px; margin-bottom: 10px;
+  background: var(--accent); color: var(--bg);
+  animation: badge-pulse 1s ease-in-out 3;
+}
+
+/* one light sweep per second for the first three seconds after the page loads */
+.card.featured::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(105deg, transparent 32%, rgba(255, 255, 255, .55) 50%, transparent 68%);
+  transform: translateX(-110%);
+  animation: card-shine 1.5s ease-in-out 2;
+}
+:root[data-theme="dark"] .card.featured::after,
+.card.featured::after { mix-blend-mode: normal; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .card.featured::after {
+    background: linear-gradient(105deg, transparent 32%, rgba(255, 255, 255, .16) 50%, transparent 68%);
+  }
+}
+:root[data-theme="dark"] .card.featured::after {
+  background: linear-gradient(105deg, transparent 32%, rgba(255, 255, 255, .16) 50%, transparent 68%);
+}
+
+@keyframes card-shine {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(110%); }
+}
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .45; }
+}
+
+@media (max-width: 700px) {
+  .card.featured { flex-direction: column; }
+  .card.featured .thumb { flex: none; aspect-ratio: 16 / 10; border-right: 0; border-bottom: 1px solid var(--border); }
+  .card.featured .body { padding: 16px 18px 18px; }
+  .card.featured h3 { font-size: 1.15rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card.featured::after, .badge-new { animation: none; }
+  .card.featured::after { display: none; }
+}
+
 /* ---------- timeline / CV ---------- */
 .timeline { list-style: none; margin: 0; padding: 0; }
 .timeline > li { display: grid; grid-template-columns: 170px 1fr; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--border); }
