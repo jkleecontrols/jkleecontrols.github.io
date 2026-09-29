@@ -52,9 +52,56 @@
     <div class="container">
       <header class="page-head">
         <p class="eyebrow">Projects</p>
-        <h1>Earlier projects</h1>
-        <p class="lead">Hardware and competition projects from my undergraduate years in Korea: drones, eVTOLs and rockets that I designed, built and flew. For current work, see <a href="research.html">Research</a>.</p>
+        <h1>Projects</h1>
+        <p class="lead">Tools I build for my own work, and the hardware and competition projects I designed and flew as an undergraduate in Korea. For research, see <a href="research.html">Research</a>.</p>
       </header>
+
+      <section class="block">
+        <div class="section-title"><h2>Software &amp; tools</h2></div>
+        <article class="project" style="border-bottom:0;margin-bottom:0;padding-bottom:8px">
+          <p class="eyebrow">Open source · Node.js · MIT</p>
+          <h2 style="margin-bottom:6px">Symphony Local</h2>
+          <p class="lead" style="margin-bottom:16px">A kanban board that watches my AI coding sessions instead of asking me to update it.</p>
+          <div class="links-row" style="margin:0 0 4px">
+            <a class="btn primary" href="https://github.com/jkleecontrols/symphony-kanban"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>Source and setup on GitHub</a>
+          </div>
+
+          <figure>
+            <img src="images/projects/symphony/board.jpg" alt="The Symphony Local board with example task cards in Ready, In Progress, Human Review and Done columns" loading="lazy">
+            <figcaption>The board with example tasks. Each card is a project folder, and the column is whatever the session in that folder is actually doing.</figcaption>
+          </figure>
+
+          <div class="two-col">
+            <div>
+              <h3>Why I built it</h3>
+              <p>I usually have Claude Code or Codex running in several folders at once — a paper, a simulation, this website. Nothing told me which one was blocked on a question, which had finished, or whether what it did still passed the project's own checks, so I kept walking through terminals one at a time.</p>
+              <p>A normal kanban board did not help: it is a second thing to keep in sync, and it drifts within a day. So this one reads the machine instead. I never move the cards.</p>
+            </div>
+            <div>
+              <h3>What it does</h3>
+              <ul>
+                <li>Each card is a project folder, and the agent for that card runs with the folder as its working directory.</li>
+                <li>The column follows the session: <b>In Progress</b> while a turn runs, <b>Human Review</b> when it stopped to ask something, <b>Ready</b> when it is open and idle, <b>Done</b> when the process is gone.</li>
+                <li>A desktop notification when a session needs an answer, so the board does not have to stay open.</li>
+                <li>Finished runs record what changed in git and whether the project's own check command still passes.</li>
+                <li>Agents are shell commands in a config file, so different cards can run different CLIs. Claude Code and Codex CLI are wired up; aider and goose are detected.</li>
+                <li>An independent implementation of the <a href="https://github.com/openai/symphony">OpenAI Symphony</a> service specification.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>Trying it</h3>
+          <p>Node 20 or newer, and nothing else — no npm dependencies, and tasks live in a local JSON file. Clone the repository, copy the example task file, run <code>npm start</code>, and open <code>127.0.0.1:8787</code>. Whichever AI CLI you want to dispatch has to be installed and signed in already.</p>
+
+          <div class="note">
+            <p><b>It is early, and built around my own setup.</b> Notifications and session detection use macOS tools, the server binds to localhost with no authentication, and auto-dispatch does not sandbox an agent — the git guard makes its changes visible and reversible, but it is not a fence. The board also renders snippets of session transcripts, so it shows conversation text on screen. It works and it is documented, but nobody else has run it yet. If you try it, I would genuinely like to hear what breaks.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="block">
+        <div class="section-title"><h2>Earlier projects</h2></div>
+        <p class="lead" style="margin-bottom:24px">Hardware and competition projects from my undergraduate years in Korea: drones, eVTOLs and rockets that I designed, built and flew.</p>
       <div class="cards">
           <a class="card" href="projects/ukc2024-poster.html">
             <div class="thumb"><img src="images/projects/ukc2024-poster/award-certificate.png" alt="" loading="lazy"></div>
@@ -89,6 +136,7 @@
             <div class="body"><div class="venue">Nov 2018</div><h3>Drone solar-panel diagnosis</h3><p>Second place, KIBWA ICT mentoring: drone-based smart diagnosis of solar power plant panels.</p></div>
           </a>
       </div>
+      </section>
 
     </div>
   </main>
