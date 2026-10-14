@@ -327,6 +327,13 @@ tr.hl td { background: var(--accent-soft); font-weight: 600; }
 .post .gallery { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
 .post .gallery img { flex: 1 1 220px; width: auto !important; min-width: 0; margin: 0; object-fit: cover; }
 .post h3 { margin-top: 28px; }
+.post blockquote {
+  margin: 22px 0; padding: 4px 0 4px 18px; border-left: 3px solid var(--accent);
+  font-size: 1.12rem; line-height: 1.5; color: var(--text);
+}
+.post figure.reel { max-width: 340px; margin: 24px auto; }
+.post figure.reel video { background: #000; margin: 0; }
+.post figure.reel figcaption { text-align: center; }
 .back { display: inline-block; margin-bottom: 24px; font-size: .92rem; }
 
 /* ---------- footer ---------- */

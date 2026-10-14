@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Symphony Local | Jackie Lee</title>
-  <meta name="description" content="A kanban board that watches the AI coding sessions running on your own machine, instead of asking you to update it.">
+  <meta name="description" content="Every Claude Code and Codex session on your machine, on one board: a local kanban board that moves itself, with a graph of which agent plans, implements and reviews.">
   <meta name="author" content="Jaekyung (Jackie) Lee">
   <meta property="og:title" content="Symphony Local">
-  <meta property="og:description" content="A kanban board that watches the AI coding sessions running on your own machine, instead of asking you to update it.">
+  <meta property="og:description" content="Every Claude Code and Codex session on your machine, on one board: a local kanban board that moves itself, with a graph of which agent plans, implements and reviews.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://jkleecontrols.github.io/projects/symphony-local.html">
-  <meta property="og:image" content="https://jkleecontrols.github.io/images/projects/symphony/board.jpg">
+  <meta property="og:image" content="https://jkleecontrols.github.io/images/projects/symphony/graph.jpg">
   <link rel="canonical" href="https://jkleecontrols.github.io/projects/symphony-local.html">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237a1f2b'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EJL%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/site.css?v=20260929b">
-  <script src="../assets/js/site.js?v=20260929b"></script>
-  <script src="../assets/js/scene.js?v=20260929b" defer></script>
+  <link rel="stylesheet" href="../assets/css/site.css?v=20261014">
+  <script src="../assets/js/site.js?v=20261014"></script>
+  <script src="../assets/js/scene.js?v=20261014" defer></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDM6Z2R0L0"></script>
   <script>
@@ -52,58 +52,73 @@
     <div class="container">
       <article class="post">
         <a class="back" href="../projects.html">← All projects</a>
-        <p class="eyebrow">Software · September 2026, updated October 2026 · Open source, MIT</p>
+        <p class="eyebrow">Software · Open source, MIT · Updated October 2026</p>
         <h1>Symphony Local</h1>
-        <div class="post-meta">A kanban board that watches my AI coding sessions instead of asking me to update it.</div>
+        <div class="post-meta">Every Claude Code and Codex session on your machine, on one board.</div>
 
         <div class="links-row" style="margin:0 0 20px">
-          <a class="btn primary" href="https://github.com/jkleecontrols/symphony-kanban"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>Source and setup on GitHub</a>
+          <a class="btn primary" href="https://github.com/jkleecontrols/symphony-kanban"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>Get it on GitHub</a>
         </div>
+
+        <figure class="reel">
+          <video controls muted playsinline preload="metadata" poster="../images/projects/symphony/agent-board-reel-poster.jpg">
+            <source src="../images/projects/symphony/agent-board-reel.mp4" type="video/mp4">
+          </video>
+          <figcaption>A 37-second tour. Recorded on a demo board with invented tasks; the notification banner is drawn for the video.</figcaption>
+        </figure>
+
+        <p>I usually have Claude Code or Codex running in several folders at once — a paper, a simulation, this website. Somewhere in there I lost track of my projects as a whole. The only way to know which session was working, which had finished, and which had been sitting on a question for an hour was to walk through the terminals one at a time.</p>
+
+        <blockquote>I run a lot of terminals at once, and I had lost track of my projects as a whole. This puts all of it on one screen.</blockquote>
+
+        <h2>A board that moves itself</h2>
+        <p>Each card is a project folder. Start a session in a terminal the way you already do. The board finds it, reads the CLI's own transcript, and moves the card: <b>In Progress</b> while a turn is running, <b>Human Review</b> when the session stops on a question for you, <b>Ready</b> when it is open and quiet, <b>Archive</b> when the process is gone. When a session needs you, a desktop notification says what it asked.</p>
+        <p>I never move the cards. A board I had to keep in sync by hand went stale the first time a session finished without telling it.</p>
 
         <figure>
           <img src="../images/projects/symphony/board.jpg" alt="The Symphony Local board with example task cards in Ready, In Progress, Human Review and Archive columns" loading="lazy">
-          <figcaption>The board with invented example tasks. Each card is a project folder, and the column is whatever the session in that folder is actually doing.</figcaption>
+          <figcaption>One card per project folder, each showing its AI, its role, its branch and the result of its last run. Invented example tasks.</figcaption>
         </figure>
 
-        <h2>Why I built it</h2>
-        <p>I usually have Claude Code or Codex running in several folders at once — a paper, a simulation, this website. Nothing told me which one was blocked on a question, which had finished, or whether what it did still passed the project's own checks, so I kept walking through terminals one at a time.</p>
-        <p>A normal kanban board did not help: it is a second thing to keep in sync, and it drifts within a day. So this one reads the machine instead. I never move the cards.</p>
-
-        <h2>What it does</h2>
+        <h2>Every agent gets a role</h2>
+        <p>Once several sessions work on one repository — one plans, one implements, one reviews, each in its own git worktree — a flat column stops saying how they relate. The graph view does: project → thread → session, where a thread is the open question several sessions are chasing.</p>
         <ul>
-          <li>Each card is a project folder, and the agent for that card runs with the folder as its working directory.</li>
-          <li>The column follows the session: <b>In Progress</b> while a turn runs, <b>Human Review</b> when it stopped to ask something, <b>Ready</b> when it is open and idle, <b>Archive</b> when the process is gone.</li>
-          <li>A desktop notification when a session needs an answer, so the board does not have to stay open.</li>
-          <li>Finished runs record what changed in git and whether the project's own check command still passes — the pass and fail panels below.</li>
-          <li>Agents are shell commands in a config file, so different cards can run different CLIs. Claude Code and Codex CLI sessions are followed in detail; aider and goose are only detected as running.</li>
-          <li>Usage rings in the top bar show how much of the Claude plan's session and weekly limits is used, and Codex usage beside it.</li>
-          <li>An independent implementation of the <a href="https://github.com/openai/symphony">OpenAI Symphony</a> service specification.</li>
+          <li>Every session carries a role — plan, implement, explore, experiment, review or main — set from a menu on its card.</li>
+          <li>Drag the dot on one card to another to draw who hands work to whom. A task with an arrow into it is not auto-dispatched until the work before it finishes.</li>
+          <li>Drag a finished card, or a whole project, onto the Done box to put it away, and bring it back from there.</li>
         </ul>
-
-        <figure>
-          <img src="../images/projects/symphony/proof-of-work.jpg" alt="Two board cards: one with a green PASS panel showing npm test exiting 0, one with a red FAIL panel showing the failing pytest output" loading="lazy">
-          <figcaption>What a finished run leaves on its card: the git change and the result of the project's own check command, with the failing output when it fails.</figcaption>
-        </figure>
-
-        <h2>October update: how the sessions fit together</h2>
-        <p>Once I started running several sessions on one repository — one planning, one implementing, one reviewing, often in separate git worktrees — a flat column of cards stopped saying how they related. So the board grew a second view.</p>
-        <ul>
-          <li><b>Graph view.</b> Project → thread → session, where a thread is the open question several sessions are chasing. Drag the dot on one card to another to draw a dependency arrow; a task listed as blocked is not dispatched until the work it waits on finishes.</li>
-          <li><b>Roles.</b> Each session carries a role — plan, implement, explore, experiment, review or main — shown on both the board and the graph and set from a menu on the card.</li>
-          <li><b>Putting work away.</b> Drag a finished card, or a whole project, onto the Done box in the corner of the graph; it can be brought back from there.</li>
-          <li><b>Codex sessions</b> are now tracked and move cards the same way Claude Code sessions do.</li>
-        </ul>
+        <p>Every project reads like an org chart.</p>
 
         <figure>
           <img src="../images/projects/symphony/graph.jpg" alt="The graph view: projects on the left, threads in the middle, session cards with role labels on the right, and arrows from a plan card to an implement card to a review card" loading="lazy">
-          <figcaption>The graph view with invented example tasks. In the billing-service thread, the plan session blocks the implementation, which blocks the review.</figcaption>
+          <figcaption>In the billing-service thread, the plan session hands off to the implementation, which hands off to the review. Invented example tasks.</figcaption>
         </figure>
 
-        <h2>Trying it</h2>
-        <p>Node 20 or newer, and nothing else — no npm dependencies (the test suite, <code>npm test</code>, is 92 tests on the standard library), and tasks live in a local JSON file. Clone the repository, copy the example task file, run <code>npm start</code>, and open <code>127.0.0.1:8787</code>. Whichever AI CLI you want to dispatch has to be installed and signed in already.</p>
+        <h2>Review the work, not the summary</h2>
+        <p>An agent saying it is done is not evidence that the work is right. Every finished run records what it changed in git and whether the project's own check command still passes, and a failure shows the failing output right on the card.</p>
+
+        <figure>
+          <img src="../images/projects/symphony/proof-of-work.jpg" alt="Two board cards: one with a green PASS panel showing npm test exiting 0, one with a red FAIL panel showing the failing pytest output" loading="lazy">
+          <figcaption>Proof of work: one run passed its checks, the other broke a rounding test.</figcaption>
+        </figure>
+
+        <h2>It takes tasks, too</h2>
+        <ul>
+          <li>Any agent you can start from a shell command can take a task, and each card picks which one. Claude Code and Codex sessions are followed in detail; aider and goose are detected as running.</li>
+          <li>It starts agents only in folders under git, one worker per folder, and never in a folder where a session of yours is open.</li>
+          <li>Usage rings in the top bar show how much of the Claude plan's session and weekly limits is used, and Codex usage beside it — five parallel sessions cost five times as much.</li>
+        </ul>
+
+        <h2>Yours, on your machine</h2>
+        <p>It runs on 127.0.0.1 with no account. Node 20 or newer and nothing else to install — no npm dependencies, 92 tests on the standard library, and tasks live in a local JSON file. It is an independent implementation of the <a href="https://github.com/openai/symphony">OpenAI Symphony</a> service specification, rewritten around the way I work.</p>
+<pre><code>git clone https://github.com/jkleecontrols/symphony-kanban
+cd symphony-kanban
+cp data/issues.example.json data/issues.json
+npm start   # then open http://127.0.0.1:8787</code></pre>
+        <p>Whichever AI CLI you want it to dispatch has to be installed and signed in already.</p>
 
         <div class="note">
-          <p><b>It is early, and built around my own setup.</b> Notifications and session detection use macOS tools, the server binds to localhost with no authentication, and auto-dispatch does not sandbox an agent or confine it to the task folder, and a card made with + New Task has auto-dispatch on by default — the git guard makes its changes visible and reversible, but it is not a fence. The board also renders snippets of session transcripts, so it shows conversation text on screen. It works and it is documented, but nobody else has run it yet. If you try it, I would genuinely like to hear what breaks.</p>
+          <p><b>It is early, and built around my own setup.</b> Notifications and session detection use macOS tools, the server has no authentication so it should stay on your own machine, and auto-dispatch does not sandbox an agent or confine it to the task folder — a card made with + New Task has auto-dispatch on by default. The git guard makes an agent's changes visible and reversible, but it is not a fence. The board also shows snippets of session transcripts on screen. Nobody else has run it yet; if you try it, I would genuinely like to hear what breaks.</p>
         </div>
       </article>
     </div>
